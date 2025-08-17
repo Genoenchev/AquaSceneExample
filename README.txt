@@ -1,5 +1,2 @@
-Aquascene Configurator (Static SPA) — v8
-- Fixed gap between tank and base: base is anchored flush to the tank bottom.
-- Base remains non-movable; only scape items are draggable.
-- Replaced theme button with a compact slider toggle (remembers choice).
-Open index.html to run.
+Aquascene — rebuild v3
+Static SPA with configurator, messenger-style chat, dark/light toggle, and responsive layout.

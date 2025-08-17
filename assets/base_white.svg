@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
-  <defs><linearGradient id="wht" x1="0" x2="1"><stop offset="0" stop-color="#f5f7fa"/><stop offset="1" stop-color="#e9eef3"/></linearGradient></defs>
-  <rect x="20" y="50" width="860" height="120" rx="10" fill="url(#wht)"/>
-  <rect x="30" y="60" width="840" height="100" rx="8" fill="#ffffff" opacity=".8"/>
-  <rect x="320" y="60" width="260" height="100" fill="#000" opacity=".06"/>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 140'><rect x='10' y='84' width='880' height='32' rx='6' fill='#eef4f7'/></svg>

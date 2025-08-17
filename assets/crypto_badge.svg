@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="84" height="28" viewBox="0 0 84 28">
+  <rect rx="6" ry="6" width="84" height="28" fill="#0f1720"/>
+  <path d="M20 14c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10z" fill="#F7931A"/>
+  <text x="42" y="18" font-family="system-ui,Segoe UI,Arial" font-size="12" fill="#fff" font-weight="700" text-anchor="middle">Crypto</text>
+</svg>

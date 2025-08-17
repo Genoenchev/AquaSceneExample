@@ -1,5 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
-  <defs><linearGradient id="flt" x1="0" x2="1"><stop offset="0" stop-color="#1e2b33"/><stop offset="1" stop-color="#2a3a45"/></linearGradient></defs>
-  <rect x="70" y="90" width="760" height="40" rx="8" fill="url(#flt)"/>
-  <rect x="100" y="135" width="700" height="6" rx="3" fill="#0b0f12" opacity=".4"/>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 140'><rect x='60' y='92' width='780' height='18' rx='6' fill='#2a3a45'/></svg>

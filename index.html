@@ -1,48 +1,83 @@
-
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Aquascene — Bespoke Fish Tanks</title>
-  <meta name="description" content="Configure and purchase bespoke fish tanks. Add rocks, plants, driftwood and fish. Premium materials and silent filtration."/>
-  <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-  <link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-  <link rel="stylesheet" href="./styles.css"/>
+<html lang="en" data-theme="dark"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Aquascene — Bespoke Fish Tanks</title>
+<meta name="description" content="Configure and purchase bespoke fish tanks. Add rocks, plants, driftwood and fish. Premium materials and silent filtration."/>
+<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
+<link rel="stylesheet" href="./styles.css"/>
 </head>
 <body>
-<header class="nav">
-  <div class="nav-inner">
-    <a class="brand" href="#"><img src="./assets/logo.svg" alt="Aquascene logo"/><span>Aquascene</span></a>
-    <nav id="site-menu" class="menu">
-      <!-- THEME SWITCH MOVED -->
-
-      <a href="#configurator">Configurator</a>
-      <a href="#existing">Existing Configurations</a>
-      <a href="#about">About</a>
-      <a href="#contact" class="cta">Start a Project</a>
-    </nav>
-<label class="theme-switch" title="Toggle light mode">
-        <input type="checkbox" id="themeToggle" aria-label="Toggle light mode">
-        <span class="track"><span class="thumb"></span></span>
-      </label>
-  </div>
-</header>
+<header class="nav"><div class="nav-inner">
+  <a class="brand" href="#"><img src="./assets/logo_transparent.png" alt="Aquascene logo"/></a>
+  <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+    <span></span><span></span><span></span>
+  </button>
+  <nav id="site-menu" class="menu">
+    <a href="#configurator">Configurator</a>
+    <a href="#existing">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="cta">Start a Project</a>
+  </nav>
+  <label class="theme-switch" title="Toggle light mode">
+    <input type="checkbox" id="themeToggle" aria-label="Toggle light mode">
+    <span class="track"><span class="thumb"></span></span>
+  </label>
+</div></header>
 
 <section class="hero">
-  <div>
-    <h1>Design Your Fish Tank</h1>
-    <p>Build your ideal tank with our interactive configurator — then we craft it with low-iron glass and ultra-quiet filtration.</p>
-    <div class="hero-actions">
-      <a href="#configurator" class="btn primary">Open Configurator</a>
-      <a href="#existing" class="btn">Existing Configurations</a>
+  <div class="carousel" aria-label="Featured scenes">
+    <button class="car-btn prev" aria-label="Previous slide">&#10094;</button>
+    <div class="car-track">
+      <div class="car-slide" style="--bg:url('https://images.unsplash.com/photo-1516239322121-432c2be93b72?q=80&w=1600&auto=format&fit=crop');">
+        <div class="car-overlay">
+          <h1>Design Your Fish Tank</h1>
+          <p>Build your ideal tank with our interactive configurator — then we craft it with low-iron glass and ultra-quiet filtration.</p>
+          <div class="hero-actions">
+            <a href="#configurator" class="btn primary">Open Configurator</a>
+            <a href="#existing" class="btn">Existing Configurations</a>
+          </div>
+        </div>
+      </div>
+      <div class="car-slide" style="--bg:url('https://www.therange.co.uk/media/4/5/1555078738_5393.jpg');">
+        <div class="car-overlay">
+          <h1>Create a Serene Aquascape</h1>
+          <p>Mix driftwood, rocks, and plants. Drag, rotate, and fine-tune until it’s perfect.</p>
+          <div class="hero-actions">
+            <a href="#configurator" class="btn primary">Start Designing</a>
+            <a href="#existing" class="btn">Browse Layouts</a>
+          </div>
+        </div>
+      </div>
+      <div class="car-slide" style="--bg:url('https://images.unsplash.com/photo-1524704796725-9fc3044a58d3?q=80&w=1400&auto=format&fit=crop');">
+        <div class="car-overlay">
+          <h1>Premium Materials, Built to Last</h1>
+          <p>Low-iron glass, silent filtration, and smart lighting. Professionally assembled.</p>
+          <div class="hero-actions">
+            <a href="#configurator" class="btn primary">Build Yours</a>
+            <a href="#faq" class="btn">Learn More</a>
+          </div>
+        </div>
+      </div>
+      <div class="car-slide" style="--bg:url('https://images.unsplash.com/photo-1505575972945-2411e7bd0d3b?q=80&w=1400&auto=format&fit=crop');">
+        <div class="car-overlay">
+          <h1>Silent & Stunning</h1>
+          <p>Focus on the view, not the hum. Our systems are tuned for whisper-quiet operation.</p>
+          <div class="hero-actions">
+            <a href="#configurator" class="btn primary">Try It Now</a>
+            <a href="#existing" class="btn">See Examples</a>
+          </div>
+        </div>
+      </div>
     </div>
+    <button class="car-btn next" aria-label="Next slide">&#10095;</button>
+    <div class="car-dots" role="tablist" aria-label="Select slide"></div>
   </div>
 </section>
 
 <section id="configurator" class="section">
   <h2 class="h2">Interactive Configurator</h2>
-  <p class="sub">Click items to add them to the tank. Drag to reposition (scape items only). Double-click to remove. Choose a base cabinet and water hue. Use × to reset.</p>
+  <p class="sub">Click items to add them to the tank. Drag to reposition. Double-click to remove. Choose a base trim &amp; water hue. Use × to reset. Wheel = scale, R = rotate, Del = remove.</p>
   <div class="config">
     <div class="tank">
       <button class="tank-reset" title="Reset configurator" aria-label="Reset">×</button>
@@ -52,100 +87,78 @@
         <div class="layer"><div class="bubbles" aria-hidden="true"></div></div>
         <div class="gloss" aria-hidden="true"></div>
       </div>
-      
     </div>
     <aside class="controls" aria-label="Configurator controls">
+      <div class="control-group"><strong>Scape Elements</strong><div class="grid"></div></div>
+      <div class="control-group"><strong>Tank Base</strong><div class="grid base-grid"></div></div>
+      <div class="control-group"><strong>Water Hue</strong><div class="swatches"></div></div>
       <div class="control-group">
-        <strong>Scape Elements</strong>
-        <div class="grid"></div>
-      </div>
-      <div class="control-group">
-        <strong>Tank Base</strong>
-        <div class="grid base-grid"></div>
-      </div>
-      <div class="control-group">
-        <strong>Water Hue</strong>
-        <div class="swatches"></div>
-      </div>
-      <div class="control-group">
-        <strong>Tips</strong>
-        <p class="sub">Balance hardscape and plants. Leave negative space—premium layouts feel airy and intentional.</p>
+        <strong>Mode</strong>
+        <div class="mode-row">
+          <label><input type="radio" name="mode" value="arrange" checked> Arrange</label>
+          <label><input type="radio" name="mode" value="animate"> Animate</label>
+          <label><input type="checkbox" id="snapBase" checked> Snap to base</label>
+        </div>
+        <div class="action-row">
+          <button type="button" class="btn small" id="saveScene">Save Design</button>
+          <button type="button" class="btn small" id="loadScene">Load</button>
+        </div>
+        <p class="sub tiny">Tips: click item to select. Drag to move (kept inside tank). Mouse wheel = scale. Press <kbd>R</kbd> to rotate, <kbd>Del</kbd> to remove.</p>
       </div>
     </aside>
   </div>
 </section>
 
 <section id="existing" class="section">
-  <h2 class="h2">Existing Configurations</h2>
+  <h2 class="h2">Gallery</h2>
   <p class="sub">Layouts inspired by boutique stores and modern homes.</p>
   <div class="tiles">
-    <article class="tile">
-      <div class="bg" style="background-image:url('https://www.aqueon.com/-/media/project/oneweb/aqueon/us/blog/fish-compatibility/compatibility_01.jpg')"></div>
-      <div class="edge"></div>
-      <div class="content"><div><div class="kicker">Tropical</div><div class="h3">Test One</div></div></div>
-    </article>
-    <article class="tile">
-      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1544551763-473ae5faefc5?q=80&w=1900&auto=format&fit=crop')"></div>
-      <div class="edge"></div>
-      <div class="content"><div><div class="kicker">Moss</div><div class="h3">Test Two</div></div></div>
-    </article>
-    <article class="tile">
-      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1516239322121-432c2be93b72?q=80&w=1900&auto=format&fit=crop')"></div>
-      <div class="edge"></div>
-      <div class="content"><div><div class="kicker">Minimalistic</div><div class="h3">Test Three</div></div></div>
-    </article>
-    <article class="tile">
-      <div class="bg" style="background-image:url('https://images.unsplash.com/photo-1470115636492-6d2b56f9146e?q=80&w=1900&auto=format&fit=crop')"></div>
-      <div class="edge"></div>
-      <div class="content"><div><div class="kicker">Compact</div><div class="h3">Test Four</div></div></div>
-    </article>
+    <article class="tile"><div class="bg" style="background-image:url('https://sa1s3optim.patientpop.com/assets/images/provider/photos/2494334.png')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Planted</div><div class="h3">Nature Valley</div></div></div></article>
+    <article class="tile"><div class="bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Amaterske_akvarium.jpg/1200px-Amaterske_akvarium.jpg')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Architectural</div><div class="h3">Room Divider Tank</div></div></div></article>
+    <article class="tile"><div class="bg" style="background-image:url('https://cdn.britannica.com/29/121829-050-911F77EC/freshwater-aquarium.jpg')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Feature</div><div class="h3">Flagship Lobby</div></div></div></article>
+    <article class="tile"><div class="bg" style="background-image:url('https://aqualayouts.com/cdn/shop/files/S183950efac4541d6be2babf9f4d83a3eB_1024x.webp?v=1722135926')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Compact</div><div class="h3">Desk Biotope</div></div></div></article>
   </div>
 </section>
 
-<section id="about" class="section">
-  <h2 class="h2">Precision Build, Clean Aesthetic</h2>
-  <p class="sub">Low-iron glass, silent filtration, remote monitoring, and professional maintenance plans.</p>
-</section>
-
-<section id="contact" class="section">
-  <h2 class="h2">Start a Project</h2>
-  <p class="sub">Send your concept; we’ll prepare design options and an installation plan.</p>
-  <form onsubmit="event.preventDefault(); alert('Static demo — connect your form endpoint');" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:760px">
-    <input placeholder="Full name" required style="padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff">
-    <input placeholder="Email" type="email" required style="padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff">
-    <textarea placeholder="Project notes" rows="4" style="grid-column:1/-1;padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff"></textarea>
-    <button class="btn primary" style="grid-column:1/-1;justify-self:start">Send Request</button>
-  </form>
-</section>
+<section id="about" class="section"><h2 class="h2">Precision Build, Clean Aesthetic</h2><p class="sub">Low-iron glass, silent filtration, remote monitoring, and professional maintenance plans.</p></section>
+<section id="contact" class="section"><h2 class="h2">Start a Project</h2>
+<p class="sub">Send your concept; we’ll prepare design options and an installation plan.</p>
+<form onsubmit="event.preventDefault(); alert('Static demo — connect your form endpoint');" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:760px">
+  <input placeholder="Full name" required style="padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff">
+  <input placeholder="Email" type="email" required style="padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff">
+  <textarea placeholder="Project notes" rows="4" style="grid-column:1/-1;padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff"></textarea>
+  <button class="btn primary" style="grid-column:1/-1;justify-self:start">Send Request</button>
+</form></section>
 
 <footer>
   <div class="foot">
     <div>
-      <div class="brand"><img src="./assets/logo.svg" alt=""><span>Aquascene</span></div>
-      <p style="color:var(--muted)">Bespoke fish tanks. Sofia • London • Dubai</p>
+      <div class="brand"><img src="./assets/logo_transparent.png" alt=""></div>
+      <p>Custom aquariums designed and assembled by professionals.</p>
+      <p><strong>Location:</strong> Sofia, Bulgaria</p>
       <small>© <span id="yr"></span> Aquascene Ltd.</small>
     </div>
     <div>
       <strong>Fish Tanks</strong>
-      <p><a href="#existing">Planted</a> · <a href="#existing">Architectural</a> · <a href="#existing">Compact</a></p>
+      <p><a href="#existing">Planted</a> · <a href="#existing">Reef</a> · <a href="#existing">Architectural</a> · <a href="#existing">Compact</a></p>
     </div>
     <div>
       <strong>Contact</strong>
       <p>hello@aquascene.example</p>
+      <p>+359 ••• •••</p>
     </div>
     <div>
       <strong>Payments</strong>
       <div class="payments">
-        <img src="./assets/visa.svg" alt="Visa">
-        <img src="./assets/mastercard.svg" alt="Mastercard">
-        <img src="./assets/paypal.svg" alt="PayPal">
-        <img src="./assets/crypto.svg" alt="Crypto">
+        <img src="./assets/visa_badge.svg" alt="Visa">
+        <img src="./assets/mastercard_badge.svg" alt="Mastercard">
+        <img src="./assets/paypal_badge.svg" alt="PayPal">
+        <img src="./assets/crypto_badge.svg" alt="Crypto">
       </div>
     </div>
   </div>
 </footer>
 
-<!-- Messenger-like chat -->
 <button class="chat-launcher" aria-label="Open chat" title="Chat">
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
     <path d="M12 3C7.03 3 3 6.8 3 11.5c0 2.49 1.2 4.73 3.16 6.25v3.25l3-1.64c.89.25 1.84.39 2.84.39 4.97 0 9-3.8 9-8.5S16.97 3 12 3z" fill="#fff"/>
@@ -153,18 +166,43 @@
   </svg>
 </button>
 <div class="chat-panel" role="dialog" aria-label="Chat with Aquascene bot">
-  <div class="chat-header">
-    <div class="avatar">A</div> Aquascene
-    <span class="dot" title="Online"></span>
-  </div>
+  <div class="chat-header"><div class="avatar">A</div> Aquascene <span class="dot" title="Online"></span></div>
   <div class="chat-body"></div>
-  <div class="chat-input">
-    <input type="text" placeholder="Write a message..." aria-label="Chat message">
-    <button type="button">Send</button>
-  </div>
+  <div class="chat-input"><input type="text" placeholder="Write a message..." aria-label="Chat message"><button type="button">Send</button></div>
 </div>
 
 <script src="./app.js"></script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
-</body>
-</html>
+<script>
+// --- UI refinements ---
+// Transparent nav on top, solid on scroll
+(function(){
+  const nav=document.querySelector('.nav');
+  if(!nav) return;
+  function onScroll(){
+    if(window.scrollY>12){ nav.classList.add('scrolled'); }
+    else{ nav.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+})();
+
+// Configurator: quality-of-life
+(function(){
+  const scene=document.querySelector('.layer.objects');
+  if(!scene) return;
+  // Deselect on background click
+  scene.addEventListener('click', (e)=>{
+    if(e.target===scene){ const sel=document.querySelector('.obj.selected'); sel?.classList.remove('selected'); }
+  });
+  // ESC to clear selection
+  document.addEventListener('keydown', (e)=>{
+    if(e.key==='Escape'){ const sel=document.querySelector('.obj.selected'); sel?.classList.remove('selected'); }
+  });
+  // Prevent stuck dragging by clearing pointer capture on cancel
+  window.addEventListener('pointercancel', ()=>{
+    document.querySelectorAll('.obj').forEach(el=>{ try{ el.releasePointerCapture && el.releasePointerCapture?.(); }catch(_){} });
+  });
+})();
+</script>
+</body></html>

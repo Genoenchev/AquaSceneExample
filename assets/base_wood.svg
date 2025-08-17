@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 200">
-  <defs><linearGradient id="wood" x1="0" x2="1"><stop offset="0" stop-color="#6f4c31"/><stop offset="1" stop-color="#845f3e"/></linearGradient></defs>
-  <rect x="20" y="50" width="860" height="120" rx="10" fill="url(#wood)"/>
-  <rect x="30" y="60" width="840" height="100" rx="8" fill="#7a563a" opacity=".5"/>
-  <rect x="320" y="60" width="260" height="100" fill="#000" opacity=".1"/>
-</svg>
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 140'><rect x='10' y='80' width='880' height='40' rx='6' fill='#7a563a'/><rect x='20' y='86' width='860' height='28' rx='6' fill='#7a563a' opacity='.55'/></svg>
