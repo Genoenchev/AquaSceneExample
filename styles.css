@@ -1,145 +1,294 @@
-/* Aquascene — rebuild v3 */
-:root{--bg:#0b1116;--ink:#0f1820;--card:#0f1922;--text:#e7f4ff;--muted:#9fb5c1;--accent:#3aa7ff;--accent-2:#66d0ff;--line:#1c2b36;--radius:16px}
-:root[data-theme="light"]{--bg:#f6fbfd;--ink:#ffffff;--card:#eef6f9;--text:#11212b;--muted:#536b78;--accent:#2cb3ff;--accent-2:#7fe9ff;--line:#d3e6ef}
-*{box-sizing:border-box}html,body{height:100%}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
-a{text-decoration:none;color:inherit}img{max-width:100%;display:block}
+:root{
+  --hf-grad: linear-gradient(90deg, rgba(220,230,240,.95) 0%, rgba(36,64,94,.92) 55%, rgba(10,22,32,.98) 100%);
+  --bg:#0b1419;
+  --panel:#0f161b;
+  --line:rgba(255,255,255,.16);
+  --text:#e8f2f6;
+  --muted:#9fb5c1;
+  --accent:#42a6e3;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+img{max-width:100%;display:block}
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
 /* Header */
-.nav{position:sticky;top:0;z-index:80;background:transparent;border-bottom:0;transition:background .25s ease, border-color .25s ease, box-shadow .25s ease}
-:root[data-theme="light"] .nav{position:sticky;top:0;z-index:80;background:transparent;border-bottom:0;transition:background .25s ease, border-color .25s ease, box-shadow .25s ease}
-.nav-inner{max-width:1240px;margin:auto;display:flex;align-items:center;gap:16px;padding:12px 18px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.3px}
-.brand img{height:56px;width:auto;aspect-ratio:auto;object-fit:contain}
-.brand span{font-size:1.5rem;font-weight:800;letter-spacing:.3px}
-.menu{margin-left:24px;display:flex;gap:18px;align-items:center}
-.theme-switch{margin-left:auto;display:inline-flex;align-items:center;gap:8px;cursor:pointer;user-select:none}
-.theme-switch .track{width:42px;height:24px;border-radius:999px;background:#20323d;border:1px solid var(--line);position:relative;display:inline-block}
-.theme-switch .thumb{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;transition:left .2s}
-:root[data-theme="light"] .theme-switch .thumb{left:22px}.theme-switch input{display:none}
+.nav{position:sticky;top:0;z-index:20;background:var(--hf-grad);border-bottom:1px solid rgba(0,0,0,.08)}
+.nav-inner{display:flex;align-items:center;gap:18px;justify-content:flex-start;min-height:64px}
+.brand{display:flex;align-items:center;gap:10px;color:#0b1220;text-decoration:none;font-weight:800;font-size:24px}
+.brand-logo{height:48px;width:auto}
+.links{display:flex;align-items:center}
+.links a{color:#000;text-decoration:none;margin-left:14px;padding:6px 8px;border-radius:8px}
+.links a:hover{background:rgba(255,255,255,.35)}
+
 /* Hero */
-.hero{position:relative;min-height:100vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:#0a1216}
-.hero::after /* removed in favor of carousel */{content:"";position:absolute;inset:0;z-index:0;background:
-  linear-gradient(180deg, rgba(0,0,0,.38), rgba(0,0,0,.18)),
-  url('https://m.media-amazon.com/images/I/61Th5-42KVL._UF894,1000_QL80_.jpg') center/cover no-repeat;opacity:.58}
-.hero > div{position:relative;z-index:1}
-.hero h1{font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.06;margin:0 12px}
-.hero p{max-width:760px;margin:12px auto 22px;color:var(--muted)}
-.hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
-.btn{padding:12px 18px;border-radius:999px;border:1px solid #223543;background:linear-gradient(180deg,#15222b,#0f1a21);color:#e7f2f6;transition:transform .15s ease, box-shadow .2s ease, opacity .2s ease}
-.btn.primary{border-color:transparent;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#031521;font-weight:800}
-.btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(0,0,0,.28)}
-/* Sections */
-.section{max-width:1240px;margin:56px auto;padding:0 18px}
-.h2{font-size:clamp(1.6rem,2.6vw,2.2rem);margin:0 0 8px}.sub{color:var(--muted);margin:0 0 14px}
-/* Configurator */
-.config{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);align-items:start;gap:18px}
-@media (max-width:1000px){.config{grid-template-columns:1fr}}
-.tank{position:relative;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--ink);padding:18px;display:grid;grid-auto-rows:min-content;box-shadow:0 6px 18px rgba(0,0,0,.20)}
-.tank-inner{position:relative;aspect-ratio:16/9;border-radius:12px;background:radial-gradient(420px 190px at 50% 18%, rgba(102,208,255,.22), transparent 60%),linear-gradient(180deg, rgba(28,146,214,.12), rgba(18,36,45,.55) 60%, rgba(6,12,14,.85));box-shadow:inset 0 0 0 2px rgba(255,255,255,.03), inset 0 -40px 80px rgba(0,0,0,.35)}
-:root[data-theme="light"] .tank-inner{background:radial-gradient(420px 190px at 50% 18%, rgba(127,233,255,.30), transparent 60%),linear-gradient(180deg, rgba(44,179,255,.12), rgba(117,205,255,.18) 60%, rgba(240,248,252,1));box-shadow:inset 0 0 0 2px rgba(0,0,0,.02), inset 0 -40px 80px rgba(0,0,0,.08)}
-.tank-reset{position:absolute;top:10px;right:10px;z-index:6;background:#0f1820;color:#fff;border:1px solid #1f3340;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;cursor:pointer;transition:transform .15s ease}
-:root[data-theme="light"] .tank-reset{background:#ffffff;color:#12303f;border:1px solid #cfe2ec}.tank-reset:hover{transform:scale(1.05)}
-.tank-base{position:absolute;left:50%;transform:translateX(-50%);bottom:0;width:94%;height:18%;display:none;z-index:0;pointer-events:none}
-.tank-base img{width:100%;height:100%;object-fit:contain}
-.gloss{position:absolute;inset:0;background:linear-gradient(120deg, rgba(255,255,255,.14), transparent 30% 70%, rgba(255,255,255,.07));mix-blend:overlay;pointer-events:none;z-index:4}
-.layer{position:absolute;inset:0;display:flex;align-items:end;justify-content:center;pointer-events:none;z-index:2}
-.layer img{position:absolute;bottom:8px;opacity:.98;pointer-events:auto;cursor:grab;transition:transform .12s}
-.layer .bubbles{position:absolute;inset:0;opacity:.28;animation:rise 10s linear infinite}
-.caustics{position:absolute;inset:0;pointer-events:none;z-index:1;background-image:radial-gradient(120px 40px at 50% 20%, rgba(255,255,255,.08), transparent 60%),radial-gradient(160px 60px at 30% 30%, rgba(255,255,255,.05), transparent 60%);mix-blend-mode:overlay;animation:caust 6s linear infinite}
-@keyframes rise{from{transform:translateY(10px)} to{transform:translateY(-10px)}}@keyframes caust{ from{background-position:0 0, 0 0} to{background-position:200px 0, -160px 0}}
-.controls{border:1px solid var(--line);background:var(--card);border-radius:16px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,.20)}
-.control-group{margin-bottom:18px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.item{border:1px solid #234151;background:#0f1a21;border-radius:12px;padding:8px;display:grid;gap:6px;cursor:pointer;transition:transform .12s ease, box-shadow .12s ease}
-:root[data-theme="light"] .item{border:1px solid #d2e6ef;background:#f8fdff}
-.item img{width:100%;height:66px;object-fit:contain;background:#0b141a;border-radius:8px;padding:6px}
-:root[data-theme="light"] .item img{background:#ffffff}.item span{font-size:.9rem;color:#d6eefc;text-align:center}:root[data-theme="light"] .item span{color:#124257}
-.item:hover{box-shadow:0 4px 14px rgba(0,0,0,.18);transform:translateY(-2px)}.item.active{outline:2px solid var(--accent)}
-.swatches{display:flex;gap:8px;flex-wrap:wrap}.swatch{width:26px;height:26px;border-radius:50%;border:2px solid #2a4655;cursor:pointer}
-:root[data-theme="light"] .swatch{border-color:#b8d7e6}
-.mode-row{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin:8px 0}.mode-row label{display:flex;gap:6px;align-items:center;color:var(--text);font-size:.95rem}
-.action-row{display:flex;gap:8px;margin:8px 0 0}.btn.small{padding:8px 12px;font-size:.9rem}
-.sub.tiny{font-size:.85rem}
-/* Existing tiles */
-.tiles{display:grid;grid-template-columns:repeat(12,1fr);gap:14px;margin-top:40px}
-.tile{grid-column:span 6;min-height:240px;position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:#0b141a}
-:root[data-theme="light"] .tile{background:#ffffff;border-color:#d3e6ef}
-.tile .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.02);transition:transform .4s;opacity:.9}.tile:hover .bg{transform:scale(1.06)}
-.tile .edge{position:absolute;inset:0;background:linear-gradient(180deg, transparent 55%, rgba(10,16,20,.96) 100%)}
-:root[data-theme="light"] .tile .edge{background:linear-gradient(180deg, transparent 55%, rgba(255,255,255,.96) 100%)}
-.tile .content{position:absolute;left:14px;right:14px;bottom:12px;display:flex;justify-content:space-between;align-items:end}
-.kicker{font-size:.75rem;letter-spacing:.18em;text-transform:uppercase;color:#b8d6e6}
-:root[data-theme="light"] .kicker{color:#2c5666}.h3{font-size:1.2rem;margin:6px 0 0}
-@media (max-width:900px){.tile{grid-column:span 12}}
+.hero{position:relative;width:100vw;margin-left:50%;transform:translateX(-50%);margin-bottom:8px}
+.hero::before,.hero::after{content:"";position:absolute;left:0;right:0;height:2px;z-index:5;background:linear-gradient(90deg, rgba(255,255,255,.25), rgba(255,255,255,.05))}
+.hero::before{top:0}.hero::after{bottom:0}
+
+.tcar{position:relative;width:100%;min-height:92vh;overflow:hidden}
+.tcar-track{display:flex;height:100%;transition:transform .6s ease;will-change:transform}
+.tcar-slide{flex:0 0 100%;height:92vh;position:relative}
+.tcar-slide img{width:100%;height:100%;object-fit:cover}
+.tcar-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.20) 0%, rgba(0,0,0,.45) 75%);pointer-events:none}
+.tcar-caption{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;width:min(900px,92vw);padding:0 16px}
+.tcar-caption h1{margin:0 0 8px;font-weight:800;letter-spacing:.2px;font-size:clamp(28px,4.8vw,56px);text-shadow:0 3px 18px rgba(0,0,0,.7),0 0 2px rgba(0,0,0,.6)}
+.tcar-caption p{margin:0;font-size:clamp(14px,1.4vw,18px);text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.cta-row{margin-top:18px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta{border:0;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:999px}
+.cta-primary{background:var(--accent);color:#0a1014;box-shadow:0 12px 26px rgba(7,17,27,.35)}
+.cta-secondary{background:rgba(10,16,20,.7);color:#eaf2f7;border:1px solid rgba(255,255,255,.25)}
+.cta-primary:hover{filter:brightness(1.06)}.cta-secondary:hover{background:rgba(10,16,20,.85)}
+
+.tcar-btn{position:absolute;top:50%;transform:translateY(-50%);z-index:3;background:rgba(0,0,0,.55);border:2px solid rgba(255,255,255,.6);color:#fff;width:56px;height:56px;border-radius:50%;cursor:pointer;box-shadow:0 6px 16px rgba(0,0,0,.35);font-size:28px}
+.tcar-btn.prev{left:10px}.tcar-btn.next{right:10px}
+.tcar-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:10px;z-index:3}
+.tcar-dots button{width:12px;height:12px;border-radius:50%;border:0;background:rgba(255,255,255,.8)}
+.tcar-dots button.active{background:#fff;box-shadow:0 0 0 3px rgba(0,0,0,.25)}
+
+/* Content sections */
+.content{max-width:1100px;margin:0 auto;padding:48px 20px}
+.section-title{font-size:clamp(24px,3.2vw,36px);margin:0 0 6px}
+.section-intro{color:var(--muted);margin:0 0 18px}
+.section-cta{display:flex;justify-content:center;margin-top:16px}
+
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:900px){.gallery-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.gallery-grid{grid-template-columns:1fr}}
+.gallery-grid img{border-radius:14px;border:1px solid var(--line);aspect-ratio:16/10;object-fit:cover;cursor:zoom-in;transition:transform .2s ease}
+.gallery-grid img:hover{transform:scale(1.02)}
+
+/* Form */
+.form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.form input,.form textarea{width:100%;padding:12px 14px;border-radius:10px;border:1px solid var(--line);background:#0c1216;color:var(--text)}
+.form button{margin-top:12px}
+
 /* Footer */
-footer{border-top:1px solid var(--line);margin-top:56px;background:#0b141a}
-:root[data-theme="light"] footer{background:#ffffff;border-color:#d3e6ef}
-.foot{max-width:1240px;margin:auto;padding:26px 18px;display:grid;grid-template-columns:1.2fr 1fr 1fr 1fr;gap:18px}
-@media (max-width:900px){.foot{grid-template-columns:1fr}}.payments{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.payments img{height:24px;filter:none}
-/* Chat */
-.chat-launcher{position:fixed;right:18px;bottom:18px;z-index:90;width:54px;height:54px;border-radius:50%;background:#1877f2;display:grid;place-items:center;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.35);cursor:pointer;border:0;transition:transform .15s}
-.chat-launcher:hover{transform:translateY(-1px)}
-.chat-panel{position:fixed;right:18px;bottom:86px;width:340px;max-width:90vw;border-radius:16px;overflow:hidden;background:#0f1820;box-shadow:0 18px 40px rgba(0,0,0,.35);display:none;flex-direction:column;z-index:90;border:1px solid #1e3240}
-:root[data-theme="light"] .chat-panel{background:#ffffff;border-color:#e6eef2;box-shadow:0 18px 40px rgba(0,0,0,.18)}.chat-panel.open{display:flex}
-.chat-header{background:#1877f2;color:#fff;padding:10px 12px;display:flex;align-items:center;gap:8px;font-weight:700;cursor:pointer}
-.chat-header .avatar{width:28px;height:28px;border-radius:50%;background:#fff;display:grid;place-items:center;color:#1877f2;font-weight:800}
-.chat-header .dot{width:8px;height:8px;border-radius:50%;background:#4cff97;margin-left:auto}
-.chat-body{padding:12px;background:#0c1419;display:flex;flex-direction:column;gap:8px;max-height:260px;overflow:auto}
-:root[data-theme="light"] .chat-body{background:#f5f7fa}.chat-body a{color:#1e89ff;text-decoration:underline}
-.msg{max-width:80%;padding:8px 12px;border-radius:18px;font-size:.95rem;line-height:1.3}
-.bot{background:#0f1922;border:1px solid #1f3340;border-bottom-left-radius:4px;color:#d9e9f1}
-:root[data-theme="light"] .bot{background:#ffffff;border:1px solid #e6eef2;color:#0d2530}
-.user{background:#1e89ff;border-bottom-right-radius:4px;align-self:flex-end;color:#fff}
-.chat-input{display:flex;gap:8px;padding:10px;border-top:1px solid #1e3240;background:#0f1820}
-:root[data-theme="light"] .chat-input{background:#ffffff;border-color:#e6eef2}
-.chat-input input{flex:1;padding:10px 12px;border-radius:22px;border:1px solid #244152;background:#0a1318;color:#e7f4ff}
-:root[data-theme="light"] .chat-input input{border:1px solid #cfe2ec;background:#fff;color:#0d2530}.chat-input button{border:0;background:#1877f2;color:#fff;border-radius:22px;padding:10px 14px;cursor:pointer}
-/* Responsive */
-@media (max-width: 820px){
-  html,body{font-size:15px}
-  .hero{min-height:58vh}
-  .config{grid-template-columns:1fr}
-  .grid{grid-template-columns:repeat(2,1fr)}
-  .chat-panel{right:10px;bottom:10px;width:96vw;border-radius:12px}
-  .chat-launcher{width:52px;height:52px;right:12px;bottom:12px}
-  .hamburger{display:inline-flex;flex-direction:column;gap:4px;margin-left:auto;width:40px;height:32px;background:transparent;border:0;cursor:pointer}
-  .hamburger span{display:block;height:2px;background:var(--text);border-radius:2px}
-  .menu{position:fixed;inset:auto 0 0 0;display:none;background:var(--ink);border-top:1px solid var(--line);padding:14px;gap:12px}
-  .menu a,.menu .cta{display:block;padding:12px 6px}
-  .menu.open{display:block}
+.site-footer{background:var(--hf-grad);border-top:1px solid rgba(255,255,255,.08)}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;grid-template-areas:"brand tanks contact" "payments payments payments";gap:6px 28px;padding:8px 0}
+.footer-grid>div:nth-child(1){grid-area:brand}.footer-grid>div:nth-child(2){grid-area:tanks}.footer-grid>div:nth-child(3){grid-area:contact}.footer-grid>div:nth-child(4){grid-area:payments}
+.site-footer .container{max-width:1400px}
+.footer-brand span{display:none} /* wordmark redundant */
+.site-footer p{margin:6px 0}
+.site-footer .footer-grid>div{display:flex;flex-direction:column;justify-content:center}
+/* Payments row: left aligned, compact, reputable logos, borders for non-framed chips */
+.payments-row{display:flex;gap:12px;justify-content:flex-start;flex-wrap:wrap}
+.pay-chip{width:120px;height:32px;display:flex;align-items:center;justify-content:center;background:transparent}
+.pay-chip img,.pay-chip svg{max-width:90%;max-height:90%}
+.pay-chip .pay-frame.mini{width:110px;height:30px;border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;justify-content:center}
+.pay-chip .pay-frame.mini.white{background:#fff}
+.pay-chip:not(.apay):not(.gpay){border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:2px 6px}
+.btc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#f7931a;margin-right:6px}
+.crypto-text{color:#fff;font-weight:800;font-family:inherit}
+
+/* Lightbox */
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.75);display:none;align-items:center;justify-content:center;z-index:40}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(96vw,1200px);max-height:90vh;border-radius:12px}
+.lb-close{position:absolute;top:16px;right:16px;border:0;background:#111;color:#fff;font-size:30px;line-height:1;width:44px;height:44px;border-radius:50%;cursor:pointer}
+
+/* v24 fixes */
+/* Nav link weight slightly thicker */
+.links a{ font-weight:600; letter-spacing:.1px }
+
+/* Footer brand logo constrained */
+.site-footer .footer-brand .brand-logo{ height:44px !important; width:auto !important; max-width:none !important; display:inline-block }
+
+/* Payments: unified outer border for all chips; keep Apple/Google white inner plate clean */
+.payments-row .pay-chip{ border:1px solid rgba(255,255,255,.2) !important; border-radius:12px !important; padding:2px 8px !important; background:transparent }
+.payments-row .pay-chip .pay-frame.mini{ border:0 } /* inner plates no extra border */
+
+/* Hero captions: more white/contrast */
+.tcar-caption h1{ color:#fff; text-shadow: 0 4px 28px rgba(0,0,0,.75), 0 0 2px rgba(0,0,0,.6) }
+.tcar-caption p{ color:#f3f6f9; text-shadow: 0 3px 18px rgba(0,0,0,.75) }
+/* CTA plate for better contrast */
+.cta-row{ position:relative }
+.cta-row::before{
+  content:""; position:absolute; inset:-10px -14px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.25);
+  border-radius:999px; filter:blur(.3px);
+  backdrop-filter: blur(6px);
 }
-@media (min-width: 821px){.hamburger{display:none}}
-a:focus-visible,.btn:focus-visible,.item:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:8px}
+.cta{ position:relative } /* raise above the plate */
 
+/* v25: remove hero CTA blur plate entirely and boost button contrast slightly */
+.cta-row::before{ display:none !important }
+.cta-primary{ background:#4cb3f0 !important }
+.cta-secondary{ background:rgba(10,16,20,.82) !important; border-color:rgba(255,255,255,.35) !important }
 
-/* === Carousel === */
-.carousel{position:relative;min-height:100vh;display:grid;place-items:stretch;overflow:hidden;border-radius:20px;margin:16px}
-.car-track{display:flex;height:100%;width:100%;transform:translateX(0);transition:transform .6s ease}
-.car-slide{position:relative;min-width:100%;height:100vh;display:grid;place-items:center;background:var(--bg) center/cover no-repeat}
-.car-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.38),rgba(0,0,0,.18));}
-.car-overlay{position:relative;z-index:1;text-align:center;padding:0 16px;max-width:900px;margin:0 auto}
-.car-btn{position:absolute;top:50%;transform:translateY(-50%);border:none;background:rgba(0,0,0,.35);backdrop-filter:blur(4px);color:#fff;width:42px;height:42px;border-radius:999px;display:grid;place-items:center;cursor:pointer}
-.car-btn:hover{transform:translateY(-50%) scale(1.05)}
-.car-btn:active{transform:translateY(-50%) scale(.98)}
-.car-btn.prev{left:12px}
-.car-btn.next{right:12px}
-.car-dots{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:8px;z-index:2}
-.car-dots button{width:9px;height:9px;border-radius:999px;border:1px solid rgba(255,255,255,.9);background:transparent;opacity:.7;cursor:pointer}
-.car-dots button[aria-selected="true"]{background:#fff;opacity:1}
-@media (min-width:1024px){
-  .carousel{margin:28px}
-  .car-btn{width:48px;height:48px}
-  .car-dots button{width:10px;height:10px}
+/* Footer logo safety: prevent any stretching and cap size */
+.site-footer .footer-brand .brand-logo{
+  height:40px !important; width:auto !important; max-width:200px !important;
+  object-fit:contain; display:inline-block !important;
 }
 
-.nav.scrolled{background:rgba(12,20,25,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 2px 10px rgba(0,0,0,.15)}
-:root[data-theme="light"] .nav.scrolled{background:rgba(255,255,255,.85)}
+/* Payments: no outer border for Apple/Google; keep for others */
+.payments-row .pay-chip.apay,
+.payments-row .pay-chip.gpay{ border:0 !important; padding:0 !important }
+.payments-row .pay-chip.apay .pay-frame.mini,
+.payments-row .pay-chip.gpay .pay-frame.mini{ border:1px solid rgba(0,0,0,.12) !important; background:#fff !important; }
 
-section{scroll-margin-top:72px}
+/* Ensure non-framed chips keep one consistent border */
+.payments-row .pay-chip:not(.apay):not(.gpay){ border:1px solid rgba(255,255,255,.22) !important }
 
-.nav a, .brand span { color: #eaf7ff; text-shadow: 0 1px 2px rgba(0,0,0,.25); }
-:root[data-theme="light"] .nav:not(.scrolled) .brand span { color:#0a1318; text-shadow:none; }
+/* v26: bigger footer logo as requested */
+.site-footer .footer-brand .brand-logo{ height:82px !important; max-width:none !important }
 
-.payments img{height:28px;width:auto;image-rendering:auto;filter:none}
+/* v27 — Header aligned left (full-width container) */
+.nav .container{ max-width:none !important; margin:0 !important; padding:0 20px !important; }
+.nav-inner{ justify-content:flex-start !important; }
 
-.payments{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-.payments img{height:30px;width:auto}
+/* v27 — Footer compact: ~50% height */
+.site-footer{ font-size:0.9rem !important; }
+.site-footer .footer-grid{ gap:4px 18px !important; padding:4px 0 !important; }
+.site-footer .footer-grid > div{ justify-content:flex-start !important; }
+.site-footer p{ margin:2px 0 0 0 !important; }
+.site-footer h4{ margin:0 0 4px 0 !important; font-size:0.95rem !important; }
+.site-footer .footer-brand .brand-logo{ height:56px !important; width:auto !important; }
+.payments-wrap{ margin-top:2px !important; }
+.payments-row{ gap:10px !important; flex-wrap:wrap; }
+.pay-chip{ width:110px !important; height:28px !important; padding:2px 6px !important; border-radius:10px !important; }
+.pay-chip img,.pay-chip svg{ max-height:80% !important; max-width:88% !important; }
+.pay-chip .pay-frame.mini{ width:100px !important; height:26px !important; border-radius:8px !important; }
+/* Keep Apple/Google un-bordered externally */
+.payments-row .pay-chip.apay, .payments-row .pay-chip.gpay{ border:0 !important; padding:0 !important; }
+
+/* v28 — Footer tweaks per request */
+/* Push footer content to the very left */
+.site-footer .container{ padding-left:0 !important; padding-right:20px !important; }
+/* 300% logo boost (from ~56px -> ~168px) */
+.site-footer .footer-brand .brand-logo{ height:168px !important; width:auto !important; max-width:none !important; }
+/* Center the other two columns vertically to align with tall logo */
+.site-footer .footer-grid{ align-items:center !important; }
+.site-footer .footer-grid > div:nth-child(2),
+.site-footer .footer-grid > div:nth-child(3){ justify-content:center !important; }
+
+/* v29 — anchor logo at absolute bottom-left of the footer, outside the columns */
+.site-footer{ position:relative }
+.site-footer .footer-grid{ position:relative; z-index:1 }
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:0; bottom:6px; height:168px !important; width:auto !important;
+  margin:0 !important; z-index:0; pointer-events:none;
+}
+
+/* v30 — keep logo bottom-left but prevent overlap by shifting content right */
+.site-footer{ position:relative }
+.site-footer .footer-grid{ position:relative; z-index:2 }
+.site-footer .container{ padding-left: 280px !important; } /* space for the large logo */
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:0; bottom:6px; height:168px !important; width:auto !important;
+  margin:0 !important; z-index:1; pointer-events:none;
+}
+
+/* Mobile: restore normal flow so logo sits above content and no huge padding */
+@media (max-width: 960px){
+  .site-footer .container{ padding-left:20px !important; }
+  .site-footer .footer-brand .brand-logo{
+    position:static; height:88px !important; margin-bottom:6px !important; pointer-events:none;
+  }
+}
+
+/* v31 — footer logo truly left, sized to footer height, and no overlap */
+.site-footer{ position:relative }
+.site-footer .footer-grid{ position:relative; z-index:2 }
+/* offset all footer content so it never overlaps logo text */
+.site-footer .container{ padding-left: clamp(260px, 30vw, 440px) !important; }
+/* logo anchored on bottom-left; sized to fit footer height nicely */
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:12px; bottom:6px;
+  height:140px !important; width:auto !important; 
+  margin:0 !important; z-index:1; pointer-events:none; object-fit:contain;
+}
+/* ensure payments don't float back under the logo */
+.payments-row{ justify-content:flex-start !important }
+@media (max-width: 960px){
+  .site-footer .container{ padding-left:20px !important; }
+  .site-footer .footer-brand .brand-logo{ position:static; height:88px !important; margin-bottom:6px !important; }
+}
+
+/* v32 — footer separator + exact left anchor for logo */
+.site-footer{
+  position:relative;
+  border-top:0; /* reset any previous */
+}
+/* subtle, crisp separator line */
+.site-footer::before{
+  content:"";
+  position:absolute; left:0; right:0; top:0; height:2px;
+  background:linear-gradient(90deg, rgba(255,255,255,.35), rgba(255,255,255,.10));
+  pointer-events:none; z-index:3;
+}
+/* ensure content never overlaps logo */
+.site-footer .container{ padding-left: clamp(260px, 28vw, 420px) !important; }
+
+/* logo exactly on the very left/bottom */
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:0 !important; bottom:0 !important;
+  height:140px !important; width:auto !important; margin:0 !important;
+  z-index:1; pointer-events:none; object-fit:contain;
+}
+
+/* v33 — footer logo -20% and pinned to the exact left */
+.site-footer .footer-brand .brand-logo{
+  height:112px !important; left:0 !important; bottom:0 !important;
+}
+/* bring columns in slightly now that logo is smaller */
+.site-footer .container{ padding-left: clamp(220px, 22vw, 360px) !important; }
+
+/* ===== Responsive augmentations (desktop remains unchanged) ===== */
+
+/* Large tablets */
+@media (max-width: 1200px){
+  .container{ padding-left: 24px; padding-right: 24px }
+  .tcar .slide{ min-height: 66vh }
+}
+
+/* Tablets */
+@media (max-width: 960px){
+  /* Header/navigation wraps naturally without changing desktop */
+  .nav .container{ padding-left: 16px; padding-right: 16px }
+  .nav-inner{ flex-wrap: wrap; gap: 8px }
+  .links{ flex-wrap: wrap; gap: 14px }
+  .links a{ padding: 6px 2px }
+  
+  /* Carousel text scales and keeps readability over photos */
+  .tcar-caption{ padding: 20px }
+  .tcar-caption h1{ font-size: clamp(28px, 6.4vw, 40px); line-height:1.12 }
+  .tcar-caption p{ font-size: clamp(14px, 3.6vw, 18px) }
+  .cta{ height:44px; padding: 0 16px; font-size: 15px }
+  .tcar .arrow{ width:44px; height:44px }
+  .tcar .dots{ bottom: 16px }
+  
+  /* Gallery grid becomes two columns */
+  .gallery-grid{ grid-template-columns: repeat(2, minmax(0,1fr)) !important; gap: 14px }
+  .gallery-card{ border-radius: 10px }
+  .gallery-card img{ width:100%; height:auto; display:block }
+  
+  /* Start a Project form stacks */
+  .form-row{ flex-direction: column; gap: 10px }
+  .form-row .field{ width:100% }
+  .form-actions .btn-primary{ width:100% }
+  
+  /* Footer — stack columns, shrink logo, remove left offset */
+  .site-footer .container{ padding-left: 16px !important; padding-right: 16px !important }
+  .site-footer .footer-grid{ grid-template-columns: 1fr !important; gap: 14px }
+  .site-footer .footer-brand .brand-logo{ position:static; height:72px !important; margin-bottom: 6px }
+  .payments-row{ gap:10px }
+  /* Two-per-row payment chips for better touch targets */
+  .pay-chip{ width: calc(50% - 8px) !important; height: 40px !important; border-radius: 12px !important }
+  .pay-chip .pay-frame.mini{ height: 38px !important; }
+}
+
+/* Small phones */
+@media (max-width: 560px){
+  .tcar .slide{ min-height: 56vh }
+  .tcar-caption{ padding: 12px }
+  .tcar-caption h1{ font-size: clamp(24px, 7.2vw, 32px) }
+  .cta{ height: 42px; font-size: 14px }
+  .gallery-grid{ grid-template-columns: 1fr !important; gap: 12px }
+  .pay-chip{ width: 100% !important }
+}

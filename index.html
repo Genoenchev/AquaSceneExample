@@ -1,208 +1,145 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark"><head>
-<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Aquascene — Bespoke Fish Tanks</title>
-<meta name="description" content="Configure and purchase bespoke fish tanks. Add rocks, plants, driftwood and fish. Premium materials and silent filtration."/>
-<link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
-<link rel="preconnect" href="https://images.unsplash.com" crossorigin>
-<link rel="stylesheet" href="./styles.css"/>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>AquaScene</title>
+  <link rel="icon" href="assets/logo_cropped.png" type="image/png">
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-<header class="nav"><div class="nav-inner">
-  <a class="brand" href="#"><img src="./assets/logo_transparent.png" alt="Aquascene logo"/></a>
-  <button class="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
-    <span></span><span></span><span></span>
-  </button>
-  <nav id="site-menu" class="menu">
-    <a href="#configurator">Configurator</a>
-    <a href="#existing">Gallery</a>
-    <a href="#about">About</a>
-    <a href="#contact" class="cta">Start a Project</a>
-  </nav>
-  <label class="theme-switch" title="Toggle light mode">
-    <input type="checkbox" id="themeToggle" aria-label="Toggle light mode">
-    <span class="track"><span class="thumb"></span></span>
-  </label>
-</div></header>
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <img src="assets/logo_cropped.png" class="brand-logo" alt="AquaScene logo"/>
+        <span>AquaScene</span>
+      </a>
+      <nav class="links">
+        <a href="#home">Home</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-<section class="hero">
-  <div class="carousel" aria-label="Featured scenes">
-    <button class="car-btn prev" aria-label="Previous slide">&#10094;</button>
-    <div class="car-track">
-      <div class="car-slide" style="--bg:url('https://images.unsplash.com/photo-1516239322121-432c2be93b72?q=80&w=1600&auto=format&fit=crop');">
-        <div class="car-overlay">
-          <h1>Design Your Fish Tank</h1>
-          <p>Build your ideal tank with our interactive configurator — then we craft it with low-iron glass and ultra-quiet filtration.</p>
-          <div class="hero-actions">
-            <a href="#configurator" class="btn primary">Open Configurator</a>
-            <a href="#existing" class="btn">Existing Configurations</a>
+  <main id="home">
+    <!-- HERO: photo + captions + CTAs + dividers -->
+    <section class="hero">
+      <div class="tcar" role="region" aria-roledescription="carousel" aria-label="Showcase">
+        <button class="tcar-btn prev" aria-label="Previous">&#10094;</button>
+        <div class="tcar-track">
+          <div class="tcar-slide">
+            <img src="assets/carousel_1.jpg" alt="Showcase 1"/>
+            <div class="tcar-caption">
+              <h1>Create a Serene Aquascape</h1>
+              <p>Mix driftwood, rocks, and plants. Drag, rotate, and fine‑tune until it’s perfect.</p>
+              <div class="cta-row">
+                <a class="cta cta-primary" href="#contact">Start Designing</a>
+                <a class="cta cta-secondary" href="#gallery">Browse Layouts</a>
+              </div>
+            </div>
+          </div>
+          <div class="tcar-slide">
+            <img src="assets/carousel_2.jpg" alt="Showcase 2"/>
+            <div class="tcar-caption">
+              <h1>Balanced. Lush. Alive.</h1>
+              <p>We curate hardscape, plants, lighting, and filtration for long‑term stability.</p>
+              <div class="cta-row">
+                <a class="cta cta-primary" href="#contact">Start Designing</a>
+                <a class="cta cta-secondary" href="#gallery">Browse Layouts</a>
+              </div>
+            </div>
+          </div>
+          <div class="tcar-slide">
+            <img src="assets/carousel_3.jpg" alt="Showcase 3"/>
+            <div class="tcar-caption">
+              <h1>For Homes &amp; Businesses</h1>
+              <p>Statement aquariums that calm customers and elevate interiors.</p>
+              <div class="cta-row">
+                <a class="cta cta-primary" href="#contact">Start Designing</a>
+                <a class="cta cta-secondary" href="#gallery">Browse Layouts</a>
+              </div>
+            </div>
+          </div>
+          <div class="tcar-slide">
+            <img src="assets/carousel_4.jpg" alt="Showcase 4"/>
+            <div class="tcar-caption">
+              <h1>White‑Glove Maintenance</h1>
+              <p>Water chemistry, trimming, and livestock health—handled.</p>
+              <div class="cta-row">
+                <a class="cta cta-primary" href="#contact">Start Designing</a>
+                <a class="cta cta-secondary" href="#gallery">Browse Layouts</a>
+              </div>
+            </div>
           </div>
         </div>
+        <button class="tcar-btn next" aria-label="Next">&#10095;</button>
+        <div class="tcar-dots" role="tablist"></div>
       </div>
-      <div class="car-slide" style="--bg:url('https://www.therange.co.uk/media/4/5/1555078738_5393.jpg');">
-        <div class="car-overlay">
-          <h1>Create a Serene Aquascape</h1>
-          <p>Mix driftwood, rocks, and plants. Drag, rotate, and fine-tune until it’s perfect.</p>
-          <div class="hero-actions">
-            <a href="#configurator" class="btn primary">Start Designing</a>
-            <a href="#existing" class="btn">Browse Layouts</a>
-          </div>
+    </section>
+
+    <section id="gallery" class="content">
+      <h2 class="section-title">Gallery</h2>
+      <p class="section-intro">Take a look at some of our builds.</p>
+      <div class="gallery-grid">
+        <figure><img src="assets/viber_image_2025-08-18_09-58-35-620.jpg" alt="Aquascape 1"/></figure>
+        <figure><img src="assets/viber_image_2025-08-18_09-58-35-855.jpg" alt="Aquascape 2"/></figure>
+        <figure><img src="assets/viber_image_2025-08-18_09-58-36-064.jpg" alt="Aquascape 3"/></figure>
+        <figure><img src="assets/viber_image_2025-08-18_09-58-36-214.jpg" alt="Aquascape 4"/></figure>
+      </div>
+    </section>
+
+    <section id="contact" class="content">
+      <h2 class="section-title">Start a Project</h2>
+      <p class="section-intro">Send your concept; we’ll prepare design options and an installation plan.</p>
+      <form class="form">
+        <div class="row">
+          <input type="text" placeholder="Full name" required>
+          <input type="email" placeholder="Email" required>
         </div>
+        <textarea rows="6" placeholder="Project notes"></textarea>
+        <button type="submit" class="cta cta-primary">Send Request</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/logo_cropped.png" class="brand-logo" alt="AquaScene logo"/>
+        <span>Aquascene</span>
+        <p>Custom aquariums designed and assembled by professionals.</p>
+        <p><strong>Location:</strong> Sofia, Bulgaria</p>
+        <p class="muted">© Aquascene Ltd.</p>
       </div>
-      <div class="car-slide" style="--bg:url('https://images.unsplash.com/photo-1524704796725-9fc3044a58d3?q=80&w=1400&auto=format&fit=crop');">
-        <div class="car-overlay">
-          <h1>Premium Materials, Built to Last</h1>
-          <p>Low-iron glass, silent filtration, and smart lighting. Professionally assembled.</p>
-          <div class="hero-actions">
-            <a href="#configurator" class="btn primary">Build Yours</a>
-            <a href="#faq" class="btn">Learn More</a>
-          </div>
-        </div>
+      <div>
+        <h4>Fish Tanks</h4>
+        <p>Planted · Reef · Architectural · Compact</p>
       </div>
-      <div class="car-slide" style="--bg:url('https://images.unsplash.com/photo-1505575972945-2411e7bd0d3b?q=80&w=1400&auto=format&fit=crop');">
-        <div class="car-overlay">
-          <h1>Silent & Stunning</h1>
-          <p>Focus on the view, not the hum. Our systems are tuned for whisper-quiet operation.</p>
-          <div class="hero-actions">
-            <a href="#configurator" class="btn primary">Try It Now</a>
-            <a href="#existing" class="btn">See Examples</a>
-          </div>
+      <div>
+        <h4>Contact</h4>
+        <p>hello@aquascene.example</p>
+        <p>+359 ••• •••</p>
+      </div>
+      <div class="payments-wrap">
+        <h4>Payments</h4>
+        <div class="payments payments-row">
+          <div class="pay-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Visa_Logo.png" alt="Visa"></div>
+          <div class="pay-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard"></div>
+          <div class="pay-chip"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Paypal_2014_logo.png" alt="PayPal"></div>
+          <div class="pay-chip"><div class="pay-frame mini"><span class="btc-dot"></span><span class="crypto-text">Crypto</span></div></div>
+          <div class="pay-chip apay"><div class="pay-frame mini white"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Apple_Pay_logo.svg" alt="Apple Pay"></div></div>
+          <div class="pay-chip gpay"><div class="pay-frame mini white"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Google_Pay_Logo.svg" alt="Google Pay"></div></div>
         </div>
       </div>
     </div>
-    <button class="car-btn next" aria-label="Next slide">&#10095;</button>
-    <div class="car-dots" role="tablist" aria-label="Select slide"></div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lb-close" aria-label="Close">×</button>
+    <img alt="Preview"/>
   </div>
-</section>
 
-<section id="configurator" class="section">
-  <h2 class="h2">Interactive Configurator</h2>
-  <p class="sub">Click items to add them to the tank. Drag to reposition. Double-click to remove. Choose a base trim &amp; water hue. Use × to reset. Wheel = scale, R = rotate, Del = remove.</p>
-  <div class="config">
-    <div class="tank">
-      <button class="tank-reset" title="Reset configurator" aria-label="Reset">×</button>
-      <div class="tank-inner">
-        <div class="tank-base"><img alt="Tank base"/></div>
-        <div class="layer objects" aria-label="Objects layer"></div>
-        <div class="layer"><div class="bubbles" aria-hidden="true"></div></div>
-        <div class="gloss" aria-hidden="true"></div>
-      </div>
-    </div>
-    <aside class="controls" aria-label="Configurator controls">
-      <div class="control-group"><strong>Scape Elements</strong><div class="grid"></div></div>
-      <div class="control-group"><strong>Tank Base</strong><div class="grid base-grid"></div></div>
-      <div class="control-group"><strong>Water Hue</strong><div class="swatches"></div></div>
-      <div class="control-group">
-        <strong>Mode</strong>
-        <div class="mode-row">
-          <label><input type="radio" name="mode" value="arrange" checked> Arrange</label>
-          <label><input type="radio" name="mode" value="animate"> Animate</label>
-          <label><input type="checkbox" id="snapBase" checked> Snap to base</label>
-        </div>
-        <div class="action-row">
-          <button type="button" class="btn small" id="saveScene">Save Design</button>
-          <button type="button" class="btn small" id="loadScene">Load</button>
-        </div>
-        <p class="sub tiny">Tips: click item to select. Drag to move (kept inside tank). Mouse wheel = scale. Press <kbd>R</kbd> to rotate, <kbd>Del</kbd> to remove.</p>
-      </div>
-    </aside>
-  </div>
-</section>
-
-<section id="existing" class="section">
-  <h2 class="h2">Gallery</h2>
-  <p class="sub">Layouts inspired by boutique stores and modern homes.</p>
-  <div class="tiles">
-    <article class="tile"><div class="bg" style="background-image:url('https://sa1s3optim.patientpop.com/assets/images/provider/photos/2494334.png')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Planted</div><div class="h3">Nature Valley</div></div></div></article>
-    <article class="tile"><div class="bg" style="background-image:url('https://upload.wikimedia.org/wikipedia/commons/thumb/a/a8/Amaterske_akvarium.jpg/1200px-Amaterske_akvarium.jpg')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Architectural</div><div class="h3">Room Divider Tank</div></div></div></article>
-    <article class="tile"><div class="bg" style="background-image:url('https://cdn.britannica.com/29/121829-050-911F77EC/freshwater-aquarium.jpg')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Feature</div><div class="h3">Flagship Lobby</div></div></div></article>
-    <article class="tile"><div class="bg" style="background-image:url('https://aqualayouts.com/cdn/shop/files/S183950efac4541d6be2babf9f4d83a3eB_1024x.webp?v=1722135926')"></div><div class="edge"></div><div class="content"><div><div class="kicker">Compact</div><div class="h3">Desk Biotope</div></div></div></article>
-  </div>
-</section>
-
-<section id="about" class="section"><h2 class="h2">Precision Build, Clean Aesthetic</h2><p class="sub">Low-iron glass, silent filtration, remote monitoring, and professional maintenance plans.</p></section>
-<section id="contact" class="section"><h2 class="h2">Start a Project</h2>
-<p class="sub">Send your concept; we’ll prepare design options and an installation plan.</p>
-<form onsubmit="event.preventDefault(); alert('Static demo — connect your form endpoint');" style="display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:760px">
-  <input placeholder="Full name" required style="padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff">
-  <input placeholder="Email" type="email" required style="padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff">
-  <textarea placeholder="Project notes" rows="4" style="grid-column:1/-1;padding:12px;border-radius:10px;border:1px solid #244152;background:#0a1318;color:#e7f4ff"></textarea>
-  <button class="btn primary" style="grid-column:1/-1;justify-self:start">Send Request</button>
-</form></section>
-
-<footer>
-  <div class="foot">
-    <div>
-      <div class="brand"><img src="./assets/logo_transparent.png" alt=""></div>
-      <p>Custom aquariums designed and assembled by professionals.</p>
-      <p><strong>Location:</strong> Sofia, Bulgaria</p>
-      <small>© <span id="yr"></span> Aquascene Ltd.</small>
-    </div>
-    <div>
-      <strong>Fish Tanks</strong>
-      <p><a href="#existing">Planted</a> · <a href="#existing">Reef</a> · <a href="#existing">Architectural</a> · <a href="#existing">Compact</a></p>
-    </div>
-    <div>
-      <strong>Contact</strong>
-      <p>hello@aquascene.example</p>
-      <p>+359 ••• •••</p>
-    </div>
-    <div>
-      <strong>Payments</strong>
-      <div class="payments">
-        <img src="./assets/visa_badge.svg" alt="Visa">
-        <img src="./assets/mastercard_badge.svg" alt="Mastercard">
-        <img src="./assets/paypal_badge.svg" alt="PayPal">
-        <img src="./assets/crypto_badge.svg" alt="Crypto">
-      </div>
-    </div>
-  </div>
-</footer>
-
-<button class="chat-launcher" aria-label="Open chat" title="Chat">
-  <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-    <path d="M12 3C7.03 3 3 6.8 3 11.5c0 2.49 1.2 4.73 3.16 6.25v3.25l3-1.64c.89.25 1.84.39 2.84.39 4.97 0 9-3.8 9-8.5S16.97 3 12 3z" fill="#fff"/>
-    <path d="M7 14l3-3 2 2 3-3 2 2" stroke="#1877f2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</button>
-<div class="chat-panel" role="dialog" aria-label="Chat with Aquascene bot">
-  <div class="chat-header"><div class="avatar">A</div> Aquascene <span class="dot" title="Online"></span></div>
-  <div class="chat-body"></div>
-  <div class="chat-input"><input type="text" placeholder="Write a message..." aria-label="Chat message"><button type="button">Send</button></div>
-</div>
-
-<script src="./app.js"></script>
-<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
-<script>
-// --- UI refinements ---
-// Transparent nav on top, solid on scroll
-(function(){
-  const nav=document.querySelector('.nav');
-  if(!nav) return;
-  function onScroll(){
-    if(window.scrollY>12){ nav.classList.add('scrolled'); }
-    else{ nav.classList.remove('scrolled'); }
-  }
-  window.addEventListener('scroll', onScroll, {passive:true});
-  onScroll();
-})();
-
-// Configurator: quality-of-life
-(function(){
-  const scene=document.querySelector('.layer.objects');
-  if(!scene) return;
-  // Deselect on background click
-  scene.addEventListener('click', (e)=>{
-    if(e.target===scene){ const sel=document.querySelector('.obj.selected'); sel?.classList.remove('selected'); }
-  });
-  // ESC to clear selection
-  document.addEventListener('keydown', (e)=>{
-    if(e.key==='Escape'){ const sel=document.querySelector('.obj.selected'); sel?.classList.remove('selected'); }
-  });
-  // Prevent stuck dragging by clearing pointer capture on cancel
-  window.addEventListener('pointercancel', ()=>{
-    document.querySelectorAll('.obj').forEach(el=>{ try{ el.releasePointerCapture && el.releasePointerCapture?.(); }catch(_){} });
-  });
-})();
-</script>
-</body></html>
+  <script src="script.js"></script>
+</body>
+</html>
