@@ -34,8 +34,18 @@ img{max-width:100%;display:block}
 .tcar-slide img{width:100%;height:100%;object-fit:cover}
 .tcar-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.20) 0%, rgba(0,0,0,.45) 75%);pointer-events:none}
 .tcar-caption{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;color:#fff;width:min(900px,92vw);padding:0 16px}
-.tcar-caption h1{margin:0 0 8px;font-weight:800;letter-spacing:.2px;font-size:clamp(28px,4.8vw,56px);text-shadow:0 3px 18px rgba(0,0,0,.7),0 0 2px rgba(0,0,0,.6)}
-.tcar-caption p{margin:0;font-size:clamp(14px,1.4vw,18px);text-shadow:0 2px 14px rgba(0,0,0,.7)}
+.tcar-caption h1 {
+  color: #fff; 
+  font-weight: 900;
+  font-size: clamp(28px, 6.8vw, 56px);
+  line-height: 1.15;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9);
+}
+.tcar-caption p {
+  color: #fefefe; 
+  font-size: clamp(14px, 3.6vw, 20px);
+  text-shadow: 0 3px 18px rgba(0,0,0,0.85);
+}
 .cta-row{margin-top:18px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
 .cta{border:0;text-decoration:none;font-weight:800;padding:14px 22px;border-radius:999px}
 .cta-primary{background:var(--accent);color:#0a1014;box-shadow:0 12px 26px rgba(7,17,27,.35)}
@@ -102,8 +112,18 @@ img{max-width:100%;display:block}
 .payments-row .pay-chip .pay-frame.mini{ border:0 } /* inner plates no extra border */
 
 /* Hero captions: more white/contrast */
-.tcar-caption h1{ color:#fff; text-shadow: 0 4px 28px rgba(0,0,0,.75), 0 0 2px rgba(0,0,0,.6) }
-.tcar-caption p{ color:#f3f6f9; text-shadow: 0 3px 18px rgba(0,0,0,.75) }
+.tcar-caption h1 {
+  color: #fff; 
+  font-weight: 900;
+  font-size: clamp(28px, 6.8vw, 56px);
+  line-height: 1.15;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9);
+}
+.tcar-caption p {
+  color: #fefefe; 
+  font-size: clamp(14px, 3.6vw, 20px);
+  text-shadow: 0 3px 18px rgba(0,0,0,0.85);
+}
 /* CTA plate for better contrast */
 .cta-row{ position:relative }
 .cta-row::before{
@@ -257,8 +277,18 @@ img{max-width:100%;display:block}
   
   /* Carousel text scales and keeps readability over photos */
   .tcar-caption{ padding: 20px }
-  .tcar-caption h1{ font-size: clamp(28px, 6.4vw, 40px); line-height:1.12 }
-  .tcar-caption p{ font-size: clamp(14px, 3.6vw, 18px) }
+  .tcar-caption h1 {
+  color: #fff; 
+  font-weight: 900;
+  font-size: clamp(28px, 6.8vw, 56px);
+  line-height: 1.15;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9);
+}
+  .tcar-caption p {
+  color: #fefefe; 
+  font-size: clamp(14px, 3.6vw, 20px);
+  text-shadow: 0 3px 18px rgba(0,0,0,0.85);
+}
   .cta{ height:44px; padding: 0 16px; font-size: 15px }
   .tcar .arrow{ width:44px; height:44px }
   .tcar .dots{ bottom: 16px }
@@ -287,8 +317,1410 @@ img{max-width:100%;display:block}
 @media (max-width: 560px){
   .tcar .slide{ min-height: 56vh }
   .tcar-caption{ padding: 12px }
-  .tcar-caption h1{ font-size: clamp(24px, 7.2vw, 32px) }
+  .tcar-caption h1 {
+  color: #fff; 
+  font-weight: 900;
+  font-size: clamp(28px, 6.8vw, 56px);
+  line-height: 1.15;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9);
+}
   .cta{ height: 42px; font-size: 14px }
   .gallery-grid{ grid-template-columns: 1fr !important; gap: 12px }
   .pay-chip{ width: 100% !important }
+}
+
+/* Improvements */
+
+/* Accent hover for links/buttons */
+nav a:hover, .btn:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Footer separator stronger */
+footer {
+  border-top: 2px solid rgba(255,255,255,0.25);
+  padding-top: 16px;
+}
+
+/* Carousel caption subtle animation */
+.tcar-caption {
+  animation: fadeUp 1s ease-out;
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translate(-50%, -40%); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+
+/* === v35 Enhancements: stronger hero watermark/title, accents, spacing, subtle animations === */
+.tcar-caption h1 {
+  color: #ffffff;
+  font-weight: 900;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.9), 0 0 4px rgba(0,0,0,0.9);
+  letter-spacing: 0.2px;
+}
+.tcar-caption p {
+  color: #fefefe;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.85);
+}
+
+/* Slightly larger hero title on large screens */
+@media (min-width: 1024px) {
+  .tcar-caption h1 { font-size: clamp(32px, 6.6vw, 48px); }
+}
+
+/* Accent color highlights for links and buttons */
+:root {
+  --accent: #22c1c3; /* aqua accent */
+}
+a:hover, .nav a:hover, .link:hover { color: var(--accent); }
+.btn, .cta, button {
+  border-radius: 12px;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+}
+.btn:hover, .cta:hover, button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.18);
+}
+
+/* Stronger footer separator */
+.footer-sep, footer::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(34,193,195,0.6), rgba(253,187,45,0.3));
+  margin: 8px 0 16px;
+}
+
+/* More breathing room between sections */
+section { scroll-margin-top: 80px; }
+section + section { margin-top: 28px; }
+
+/* Subtle motion for hero caption */
+.tcar-caption { animation: captionRise .7s ease-out both; }
+@keyframes captionRise {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 16px)); }
+  to   { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/* Optional: stronger nav link size & spacing */
+.nav a { font-size: 0.95rem; letter-spacing: .2px; }
+
+
+/* === v36 Enhancements === */
+
+/* Hero clarity: remove dim overlays, boost brightness */
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+.hero img, .carousel img {
+  filter: brightness(1.08) contrast(1.04);
+}
+
+/* CTA button style */
+.cta-main {
+  background: var(--accent);
+  color: #fff !important;
+  padding: 12px 28px;
+  border-radius: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+.cta-main:hover {
+  background: #1aa7a9;
+  transform: translateY(-2px);
+}
+
+/* Card hover zoom effect */
+.card, .config-card, .gallery-item {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+.card:hover, .config-card:hover, .gallery-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.25);
+}
+
+/* Payment sections: enforce white background inside borders */
+.payment-method {
+  background: #fff;
+  border-radius: 8px;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment-method img {
+  max-height: 40px;
+  object-fit: contain;
+}
+
+
+/* === v36: Hero clarity + filled CTA + slide zoom + payments white plates === */
+
+/* 1) Kill dim overlays on hero entirely */
+.hero::before,
+.hero::after {
+  display: none !important;
+}
+
+/* Ensure hero/carousel images are not dimmed by filters */
+.hero img,
+.carousel img,
+.tcar-slide img {
+  filter: none !important;
+}
+
+/* 2) Hero CTAs: solid primary + subtle lift */
+.cta-primary {
+  background: #1fb6ff !important; /* brighter aqua/blue */
+  color: #071118 !important;
+  box-shadow: 0 10px 24px rgba(0,0,0,.28);
+}
+.cta-primary:hover { transform: translateY(-2px); }
+.cta-secondary { background: rgba(8,12,16,.9) !important; }
+
+/* 3) Card & gallery hover zoom */
+.card, .config-card, .gallery-item {
+  transition: transform .28s ease, box-shadow .28s ease;
+}
+.card:hover, .config-card:hover, .gallery-item:hover {
+  transform: translateY(-2px) scale(1.015);
+  box-shadow: 0 14px 30px rgba(0,0,0,.18);
+}
+
+/* 4) Active slide slow zoom for parallax-like feel */
+.tcar-slide img {
+  transition: transform 6s ease, filter .3s ease;
+  will-change: transform;
+}
+.tcar-slide.active img {
+  transform: scale(1.035);
+}
+
+/* 5) Payments: all chips get white background & light border like Apple/Google Pay */
+.payments-row .pay-chip {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+  padding: 2px 8px !important;
+}
+.payments-row .pay-chip .pay-frame.mini {
+  background: #ffffff !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+}
+
+
+/* === v37: Clearer hero text + crypto text fix + contact update === */
+
+/* Hero caption: force solid white */
+.tcar-caption h1 {
+  color: #ffffff !important;
+  text-shadow: 0 4px 28px rgba(0,0,0,0.95), 0 0 6px rgba(0,0,0,0.9) !important;
+}
+.tcar-caption p {
+  color: #ffffff !important;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.9) !important;
+}
+
+/* Crypto chip text black for white background */
+.crypto-text {
+  color: #000 !important;
+}
+
+
+/* === v38: Pure white hero text + plain contact email === */
+.tcar-caption h1 {
+  color: #ffffff !important;
+  font-weight: 900 !important;
+  text-shadow: 0 4px 20px rgba(0,0,0,0.85), 0 0 8px rgba(0,0,0,0.7) !important;
+}
+.tcar-caption p {
+  color: #ffffff !important;
+  text-shadow: 0 3px 16px rgba(0,0,0,0.85) !important;
+}
+
+/* Contact email should inherit normal text color, no link blue */
+footer p, footer a {
+  color: #e8f2f6 !important;
+  text-decoration: none !important;
+}
+
+
+/* === v38: keep original footer layout, neutralize link blue === */
+.footer-grid a { 
+  color: inherit !important; 
+  text-decoration: none !important; 
+}
+.footer-grid a:hover { 
+  opacity: .9; 
+  text-decoration: none !important; 
+}
+
+
+/* Strongest hero title clarity */
+.tcar-caption h1 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  /* tight multi-shadow ring to simulate stroke for crisp edges */
+  text-shadow:
+    0 0 0 rgba(0,0,0,1),
+    0 1px 0 rgba(0,0,0,0.95),
+    1px 0 0 rgba(0,0,0,0.95),
+    -1px 0 0 rgba(0,0,0,0.95),
+    0 -1px 0 rgba(0,0,0,0.95),
+    0 6px 22px rgba(0,0,0,0.85);
+  -webkit-text-stroke: 0 transparent;
+  mix-blend-mode: normal !important;
+}
+.tcar-caption p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 3px 18px rgba(0,0,0,0.9) !important;
+}
+
+
+/* === v39: enforce clean hero title === */
+.tcar-caption h1 {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 2px rgba(0,0,0,0.95), 0 4px 12px rgba(0,0,0,0.9) !important;
+}
+.tcar-caption p {
+  color: #ffffff !important;
+  opacity: 1 !important;
+  text-shadow: 0 0 2px rgba(0,0,0,0.9), 0 3px 10px rgba(0,0,0,0.85) !important;
+}
+
+
+/* === v39: Hero title ultra-clarity + footer email inherit === */
+
+/* Footer emails: keep original look, no blue */
+.footer-grid a { color: inherit !important; text-decoration: none !important; }
+.footer-grid a:hover { text-decoration: none !important; opacity: .95; }
+
+/* Hero title: pure white with very tight halo to avoid grey cast */
+.tcar-caption h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 6px rgba(0,0,0,.80), 0 0 1px rgba(0,0,0,.95) !important;
+  opacity: 1 !important;
+  font-weight: 900 !important;
+}
+.tcar-caption p {
+  color: #ffffff !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,.75) !important;
+  opacity: 1 !important;
+}
+
+
+/* === v40: hero pure-white, stop arrow motion, restore footer look === */
+
+/* Make hero captions 100% pure white without dimming */
+.tcar-caption, .tcar-caption * {
+  opacity: 1 !important;
+  filter: none !important;
+  mix-blend-mode: normal !important;
+}
+.tcar-caption { animation: none !important; }
+.tcar-caption h1 {
+  color: #ffffff !important;
+  text-shadow: none !important; /* remove halo that can grey out */
+  -webkit-text-stroke: 0 !important;
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
+  font-weight: 900 !important;
+}
+.tcar-caption p {
+  color: #ffffff !important;
+  text-shadow: none !important;
+}
+
+/* Ensure slides/hero images are not affecting perceived white */
+.hero img, .tcar-slide img, .carousel img { filter: none !important; }
+
+/* Stop carousel arrows from moving on hover */
+.tcar-btn { transition: none !important; transform: none !important; }
+.tcar-btn:hover { transform: none !important; box-shadow: none !important; }
+
+/* Limit generic hover lift so it doesn't hit carousel arrows */
+.btn:hover, .cta:hover, button:hover { transform: translateY(-1px); }
+.tcar-btn.btn:hover, .tcar-btn:hover { transform: none !important; }
+
+/* Footer email inherits color (no blue) */
+.footer-grid a { color: inherit !important; text-decoration: none !important; }
+.footer-grid a:hover { text-decoration: none !important; opacity: .95; }
+
+
+/* === v41: footer layout restore, static arrows, ultra-clear hero text === */
+
+/* 0) Make sure hero overlays cannot dim anything */
+.hero::before, .hero::after { display: none !important; }
+.tcar-slide::before, .tcar-slide::after { display: none !important; }
+
+/* 1) Hero title: pure white, no halo */
+.tcar-caption { z-index: 10 !important; }
+.tcar-caption h1 {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+}
+.tcar-caption p {
+  color: #ffffff !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+/* 2) Carousel arrows: keep fixed (no motion on hover) */
+.tcar-btn { transition: none !important; }
+.tcar-btn:hover { transform: translateY(-50%) !important; box-shadow: none !important; }
+
+/* 3) Footer — restore original grid spacing and item sizing */
+.site-footer { padding-top: 14px !important; padding-bottom: 10px !important; }
+.footer-grid {
+  grid-template-columns: 2fr 1fr 1fr !important;
+  gap: 6px 28px !important;
+  align-items: center !important;
+}
+.footer-grid > div { align-items: flex-start !important; }
+.footer-grid a { color: inherit !important; text-decoration: none !important; }
+
+/* Payments: keep original compact size but white plates for all */
+.payments-row { gap: 10px !important; justify-content: flex-start !important; flex-wrap: wrap !important; }
+.payments-row .pay-chip {
+  width: 120px !important;
+  height: 32px !important;
+  border-radius: 16px !important;
+  padding: 2px 8px !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+}
+.payments-row .pay-chip img, .payments-row .pay-chip svg {
+  max-height: 22px !important;
+  max-width: 90% !important;
+}
+.payments-row .pay-chip .pay-frame.mini {
+  width: 110px !important;
+  height: 30px !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+}
+.crypto-text { color: #000 !important; }
+
+
+/* === v42: hero title readable border + footer refinement === */
+/* Subtle contrast ring so #fff stays crisp over bright leaves/fish */
+.tcar-caption h1{
+  color:#fff !important;
+  opacity:1 !important;
+  /* ultra‑thin stroke where supported */
+  -webkit-text-stroke: .6px rgba(0,0,0,.45);
+  /* cross‑browser fallback ring (kept tiny to avoid greying) */
+  text-shadow:
+    0 0 1px rgba(0,0,0,.85),
+    0 1px 1px rgba(0,0,0,.55),
+    0 6px 18px rgba(0,0,0,.35);
+}
+.tcar-caption p{
+  color:#fff !important;
+  text-shadow: 0 1px 1px rgba(0,0,0,.55), 0 4px 12px rgba(0,0,0,.35) !important;
+  opacity:1 !important;
+}
+
+
+/* Footer refinements (compact, balanced columns) */
+.site-footer{ padding: 8px 0 10px !important; }
+.footer-grid{
+  grid-template-columns: 1.8fr 1.4fr 1.2fr !important;
+  gap: 6px 22px !important;
+  align-items: start !important;
+}
+.footer-grid>div{ margin: 0 !important; }
+.footer-grid a{ color: inherit !important; text-decoration:none !important; }
+
+/* Payments in a tidy 2-col grid so it isn't a tall stack */
+.payments-row{
+  display:grid !important;
+  grid-template-columns: repeat(2, minmax(112px, 1fr)) !important;
+  gap:10px 12px !important;
+  justify-items: stretch !important;
+}
+.payments-row .pay-chip{
+  width: auto !important;
+  height: 34px !important;
+  border-radius: 16px !important;
+  padding: 4px 10px !important;
+  background:#fff !important;
+  border:1px solid rgba(0,0,0,.12) !important;
+}
+.payments-row .pay-chip .pay-frame.mini{
+  width: 100% !important;
+  height: 30px !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+  background:#fff !important;
+}
+.payments-row .pay-chip img, .payments-row .pay-chip svg{
+  max-height: 22px !important;
+  max-width: 90% !important;
+}
+.crypto-text{ color:#000 !important; }
+
+
+/* === v43: footer original layout (single-column payments) + keep white plates === */
+.footer-grid{
+  grid-template-columns: 2fr 1fr 1fr !important;
+  gap: 6px 28px !important;
+  align-items: start !important;
+}
+.payments-row{
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 10px !important;
+}
+.payments-row .pay-chip{
+  width: 150px !important;
+  height: 34px !important;
+  border-radius: 16px !important;
+  padding: 4px 10px !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+}
+.payments-row .pay-chip .pay-frame.mini{
+  width: 100% !important;
+  height: 30px !important;
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+}
+.payments-row .pay-chip img, .payments-row .pay-chip svg{
+  max-height: 22px !important;
+  max-width: 90% !important;
+}
+.crypto-text{ color:#000 !important; }
+
+
+/* === v44: lock carousel arrows, keep pure-white title, footer baseline === */
+.tcar-btn{
+  top:50% !important;
+  transform: translateY(-50%) !important;
+  transition: none !important;
+  animation: none !important;
+}
+.tcar-btn:hover,
+.tcar-btn:active,
+.tcar-btn:focus{
+  transform: translateY(-50%) !important;
+  box-shadow: none !important;
+}
+
+/* keep dots from nudging things */
+.tcar-dots button{ transition: none !important; }
+
+
+/* Re-affirm pure white + thin ring for hero title */
+.tcar-caption h1{
+  color:#fff !important;
+  -webkit-text-stroke:.6px rgba(0,0,0,.45);
+  text-shadow:0 0 1px rgba(0,0,0,.85),0 1px 1px rgba(0,0,0,.55);
+  opacity:1 !important;
+}
+.tcar-caption p{
+  color:#fff !important;
+  text-shadow:0 1px 1px rgba(0,0,0,.5);
+  opacity:1 !important;
+}
+
+
+/* Footer strict reset to 3 columns (brand / info / contact+payments) */
+.site-footer{ padding:10px 0 12px !important; }
+.footer-grid{
+  display:grid !important;
+  grid-template-columns: 2fr 1fr 1fr !important;
+  gap: 6px 28px !important;
+  align-items:start !important;
+}
+.footer-grid h4{ margin:0 0 6px !important; }
+.footer-grid a{ color: inherit !important; text-decoration: none !important; }
+.footer-grid a:hover{ opacity:.95 !important; }
+
+/* Payments: single vertical column */
+.payments-row{
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:flex-start !important;
+  gap:10px !important;
+}
+.payments-row .pay-chip{
+  width:160px !important;
+  height:36px !important;
+  border-radius:18px !important;
+  padding:4px 10px !important;
+  background:#fff !important;
+  border:1px solid rgba(0,0,0,.12) !important;
+}
+.payments-row .pay-chip .pay-frame.mini{
+  width:100% !important;
+  height:32px !important;
+  border:1px solid rgba(0,0,0,.12) !important;
+  background:#fff !important;
+}
+.payments-row .pay-chip img, .payments-row .pay-chip svg{
+  max-height:22px !important;
+  max-width:90% !important;
+}
+.crypto-text{ color:#000 !important; }
+
+/* === v45 Footer from user's working_build === */
+
+
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+.brand-logo{height:48px;width:auto}
+
+
+/* Footer */
+.site-footer{background:var(--hf-grad);border-top:1px solid rgba(255,255,255,.08)}
+
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:auto auto;grid-template-areas:"brand tanks contact" "payments payments payments";gap:6px 28px;padding:8px 0}
+
+.footer-grid>div:nth-child(1){grid-area:brand}
+.footer-grid>div:nth-child(2){grid-area:tanks}
+.footer-grid>div:nth-child(3){grid-area:contact}
+.footer-grid>div:nth-child(4){grid-area:payments}
+
+.site-footer .container{max-width:1400px}
+
+.footer-brand span{display:none}
+ /* wordmark redundant */
+.site-footer p{margin:6px 0}
+
+.site-footer .footer-grid>div{display:flex;flex-direction:column;justify-content:center}
+
+/* Payments row: left aligned, compact, reputable logos, borders for non-framed chips */
+.payments-row{display:flex;gap:12px;justify-content:flex-start;flex-wrap:wrap}
+
+.pay-chip{width:120px;height:32px;display:flex;align-items:center;justify-content:center;background:transparent}
+
+.pay-chip img,.pay-chip svg{max-width:90%;max-height:90%}
+
+.pay-chip .pay-frame.mini{width:110px;height:30px;border:1px solid var(--line);border-radius:9px;display:flex;align-items:center;justify-content:center}
+
+.pay-chip .pay-frame.mini.white{background:#fff}
+
+.pay-chip:not(.apay):not(.gpay){border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:2px 6px}
+
+.btc-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#f7931a;margin-right:6px}
+
+.crypto-text{color:#fff;font-weight:800;font-family:inherit}
+
+
+/* Footer brand logo constrained */
+.site-footer .footer-brand .brand-logo{ height:44px !important; width:auto !important; max-width:none !important; display:inline-block }
+
+
+/* Payments: unified outer border for all chips; keep Apple/Google white inner plate clean */
+.payments-row .pay-chip{ border:1px solid rgba(255,255,255,.2) !important; border-radius:12px !important; padding:2px 8px !important; background:transparent }
+
+.payments-row .pay-chip .pay-frame.mini{ border:0 }
+
+
+/* Footer logo safety: prevent any stretching and cap size */
+.site-footer .footer-brand .brand-logo{
+  height:40px !important; width:auto !important; max-width:200px !important;
+  object-fit:contain; display:inline-block !important;
+}
+
+
+/* Payments: no outer border for Apple/Google; keep for others */
+.payments-row .pay-chip.apay,
+.payments-row .pay-chip.gpay{ border:0 !important; padding:0 !important }
+
+.payments-row .pay-chip.apay .pay-frame.mini,
+.payments-row .pay-chip.gpay .pay-frame.mini{ border:1px solid rgba(0,0,0,.12) !important; background:#fff !important; }
+
+
+/* Ensure non-framed chips keep one consistent border */
+.payments-row .pay-chip:not(.apay):not(.gpay){ border:1px solid rgba(255,255,255,.22) !important }
+
+
+/* v26: bigger footer logo as requested */
+.site-footer .footer-brand .brand-logo{ height:82px !important; max-width:none !important }
+
+
+/* v27 — Header aligned left (full-width container) */
+.nav .container{ max-width:none !important; margin:0 !important; padding:0 20px !important; }
+
+
+/* v27 — Footer compact: ~50% height */
+.site-footer{ font-size:0.9rem !important; }
+
+.site-footer .footer-grid{ gap:4px 18px !important; padding:4px 0 !important; }
+
+.site-footer .footer-grid > div{ justify-content:flex-start !important; }
+
+.site-footer p{ margin:2px 0 0 0 !important; }
+
+.site-footer h4{ margin:0 0 4px 0 !important; font-size:0.95rem !important; }
+
+.site-footer .footer-brand .brand-logo{ height:56px !important; width:auto !important; }
+
+.payments-wrap{ margin-top:2px !important; }
+
+.payments-row{ gap:10px !important; flex-wrap:wrap; }
+
+.pay-chip{ width:110px !important; height:28px !important; padding:2px 6px !important; border-radius:10px !important; }
+
+.pay-chip img,.pay-chip svg{ max-height:80% !important; max-width:88% !important; }
+
+.pay-chip .pay-frame.mini{ width:100px !important; height:26px !important; border-radius:8px !important; }
+
+/* Keep Apple/Google un-bordered externally */
+.payments-row .pay-chip.apay, .payments-row .pay-chip.gpay{ border:0 !important; padding:0 !important; }
+
+
+/* v28 — Footer tweaks per request */
+/* Push footer content to the very left */
+.site-footer .container{ padding-left:0 !important; padding-right:20px !important; }
+
+/* 300% logo boost (from ~56px -> ~168px) */
+.site-footer .footer-brand .brand-logo{ height:168px !important; width:auto !important; max-width:none !important; }
+
+/* Center the other two columns vertically to align with tall logo */
+.site-footer .footer-grid{ align-items:center !important; }
+
+.site-footer .footer-grid > div:nth-child(2),
+.site-footer .footer-grid > div:nth-child(3){ justify-content:center !important; }
+
+
+/* v29 — anchor logo at absolute bottom-left of the footer, outside the columns */
+.site-footer{ position:relative }
+
+.site-footer .footer-grid{ position:relative; z-index:1 }
+
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:0; bottom:6px; height:168px !important; width:auto !important;
+  margin:0 !important; z-index:0; pointer-events:none;
+}
+
+
+/* v30 — keep logo bottom-left but prevent overlap by shifting content right */
+.site-footer{ position:relative }
+
+.site-footer .footer-grid{ position:relative; z-index:2 }
+
+.site-footer .container{ padding-left: 280px !important; }
+ /* space for the large logo */
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:0; bottom:6px; height:168px !important; width:auto !important;
+  margin:0 !important; z-index:1; pointer-events:none;
+}
+
+  .site-footer .footer-brand .brand-logo{
+    position:static; height:88px !important; margin-bottom:6px !important; pointer-events:none;
+  }
+
+}
+
+/* v31 — footer logo truly left, sized to footer height, and no overlap */
+.site-footer{ position:relative }
+
+/* offset all footer content so it never overlaps logo text */
+.site-footer .container{ padding-left: clamp(260px, 30vw, 440px) !important; }
+
+/* logo anchored on bottom-left; sized to fit footer height nicely */
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:12px; bottom:6px;
+  height:140px !important; width:auto !important; 
+  margin:0 !important; z-index:1; pointer-events:none; object-fit:contain;
+}
+
+/* ensure payments don't float back under the logo */
+.payments-row{ justify-content:flex-start !important }
+
+  .site-footer .footer-brand .brand-logo{ position:static; height:88px !important; margin-bottom:6px !important; }
+
+}
+
+/* v32 — footer separator + exact left anchor for logo */
+.site-footer{
+  position:relative;
+  border-top:0; /* reset any previous */
+}
+
+/* subtle, crisp separator line */
+.site-footer::before{
+  content:"";
+  position:absolute; left:0; right:0; top:0; height:2px;
+  background:linear-gradient(90deg, rgba(255,255,255,.35), rgba(255,255,255,.10));
+  pointer-events:none; z-index:3;
+}
+
+/* ensure content never overlaps logo */
+.site-footer .container{ padding-left: clamp(260px, 28vw, 420px) !important; }
+
+
+/* logo exactly on the very left/bottom */
+.site-footer .footer-brand .brand-logo{
+  position:absolute; left:0 !important; bottom:0 !important;
+  height:140px !important; width:auto !important; margin:0 !important;
+  z-index:1; pointer-events:none; object-fit:contain;
+}
+
+
+/* v33 — footer logo -20% and pinned to the exact left */
+.site-footer .footer-brand .brand-logo{
+  height:112px !important; left:0 !important; bottom:0 !important;
+}
+
+/* bring columns in slightly now that logo is smaller */
+.site-footer .container{ padding-left: clamp(220px, 22vw, 360px) !important; }
+
+  
+  /* Footer — stack columns, shrink logo, remove left offset */
+  .site-footer .container{ padding-left: 16px !important; padding-right: 16px !important }
+
+  .site-footer .footer-grid{ grid-template-columns: 1fr !important; gap: 14px }
+
+  .site-footer .footer-brand .brand-logo{ position:static; height:72px !important; margin-bottom: 6px }
+
+  .payments-row{ gap:10px }
+
+  /* Two-per-row payment chips for better touch targets */
+  .pay-chip{ width: calc(50% - 8px) !important; height: 40px !important; border-radius: 12px !important }
+
+  .pay-chip .pay-frame.mini{ height: 38px !important; }
+
+  .pay-chip{ width: 100% !important }
+/* v45: lock arrows and keep hero title crisp */
+.tcar-btn{ top:50% !important; transform:translateY(-50%) !important; transition:none !important; animation:none !important; }
+.tcar-btn:hover,.tcar-btn:active,.tcar-btn:focus{ transform:translateY(-50%) !important; box-shadow:none !important; }
+.tcar-caption h1{ color:#fff !important; -webkit-text-stroke:.6px rgba(0,0,0,.45); text-shadow:0 0 1px rgba(0,0,0,.85); opacity:1 !important; }
+.tcar-caption p{ color:#fff !important; text-shadow:0 1px 1px rgba(0,0,0,.5); opacity:1 !important; }
+
+
+/* === v46: Payments in one row on desktop, keep white plates === */
+@media (min-width: 900px){
+  .payments-row{
+    display:flex !important;
+    flex-direction:row !important;
+    align-items:center !important;
+    gap:12px !important;
+    flex-wrap:nowrap !important;
+    justify-content:flex-start !important;
+  }
+  .payments-row .pay-chip{
+    width:auto !important;
+    min-width:128px !important;
+    height:36px !important;
+    border-radius:18px !important;
+    padding:4px 12px !important;
+    background:#fff !important;
+    border:1px solid rgba(0,0,0,.12) !important;
+  }
+  .payments-row .pay-chip .pay-frame.mini{
+    width:auto !important;
+    height:32px !important;
+    border:1px solid rgba(0,0,0,.12) !important;
+    background:#fff !important;
+    padding:0 10px !important;
+  }
+  .payments-row .pay-chip img, .payments-row .pay-chip svg{
+    max-height:22px !important;
+    max-width:110px !important;
+  }
+}
+
+
+/* === v47: payments row fixes (logos visible), sizing, and mobile scroll === */
+.payments-row{
+  display:flex !important;
+  align-items:center !important;
+  gap:10px !important;
+  flex-wrap:nowrap !important;
+  overflow-x:auto !important;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.payments-row .pay-chip{
+  flex:0 0 auto !important;
+  min-width:118px !important;
+  height:34px !important;
+  border-radius:17px !important;
+  background:#fff !important;
+  border:1px solid rgba(0,0,0,.12) !important;
+  padding:4px 8px !important;
+}
+.payments-row .pay-chip .pay-frame.mini{
+  width:auto !important;
+  height:30px !important;
+  background:#fff !important;
+  border:1px solid rgba(0,0,0,.12) !important;
+  padding:0 8px !important;
+}
+.payments-row .pay-chip img, .payments-row .pay-chip svg{
+  display:block !important;
+  height:20px !important;
+  width:auto !important;
+  max-width:120px !important;
+}
+.payments-row .pay-chip.apay img,
+.payments-row .pay-chip.gpay img{
+  display:block !important;
+  height:20px !important;
+  width:auto !important;
+}
+.crypto-text{ color:#000 !important; }
+
+
+/* Typography & focus */
+:root{
+  --fs-h1: clamp(28px, 7vw, 44px);
+  --fs-p: clamp(14px, 3.6vw, 18px);
+  --lh-tight: 1.1;
+  --lh-body: 1.5;
+}
+.tcar-caption h1{ font-size: var(--fs-h1) !important; line-height: var(--lh-tight) !important; }
+.tcar-caption p{ font-size: var(--fs-p) !important; line-height: var(--lh-body) !important; }
+a, button, .cta { outline: none; }
+a:focus-visible, button:focus-visible, .cta:focus-visible, .tcar-btn:focus-visible{
+  outline: 2px solid #1fb6ff !important;
+  outline-offset: 2px !important;
+  border-radius: 8px;
+}
+
+/* CTA styles: clear primary vs secondary */
+.cta-primary{ background:#1fb6ff !important; color:#071118 !important; }
+.cta-secondary{ background:transparent !important; border:1px solid rgba(255,255,255,.6) !important; color:#fff !important; }
+.cta-primary:hover{ transform: translateY(-1px); }
+.cta-secondary:hover{ transform: translateY(-1px); }
+
+
+/* === v48: Mobile polish — top/nav, hero caption plate, static arrows, footer stack === */
+
+/* Top nav: compact + hamburger */
+@media (max-width: 768px){
+  nav{ position: sticky; top: 0; z-index: 100; backdrop-filter: saturate(120%) blur(6px); background: rgba(10,18,28,.6); }
+  nav .brand{ display:flex; align-items:center; gap:8px; }
+  .nav-toggle{ margin-left:auto; background:transparent; border:0; font-size:22px; padding:8px 10px; color:#eaf2f7; }
+  .nav-links{ display:none; flex-direction:column; gap:4px; padding:8px 0 12px; }
+  nav.open .nav-links{ display:flex; }
+  nav .nav a{ padding:10px 12px; }
+}
+
+/* Hero: mobile "glass" plate behind caption for readability like Apple/Netflix */
+@media (max-width: 768px){
+  .tcar{ height: calc(100vh - 56px); }
+  .tcar-slide img{ object-fit: cover; }
+  .tcar-caption{
+    left:50%; top:52%;
+    transform: translate(-50%, -50%);
+    width: min(92vw, 520px);
+    padding: 12px 14px;
+    background: rgba(0,0,0,.32);
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.28);
+  }
+  .tcar-caption h1{ color:#fff !important; -webkit-text-stroke:.5px rgba(0,0,0,.4); text-shadow: 0 0 1px rgba(0,0,0,.75); }
+  .tcar-caption p{ color:#f9fbfd !important; opacity:.95; }
+  .cta-row{ gap:10px; }
+  .cta{ height:40px; padding: 0 14px; font-size:14px; }
+  /* arrows: smaller, fixed, closer to edges */
+  .tcar-btn{ width:40px; height:40px; line-height:40px; }
+  .tcar-btn.prev{ left:6px; }
+  .tcar-btn.next{ right:6px; }
+  .tcar-btn, .tcar-btn:hover, .tcar-btn:active{ transform: translateY(-50%) !important; }
+  .tcar-dots{ bottom: 10px; }
+}
+
+/* Footer mobile: stack sections, payments single horizontal row scroll */
+@media (max-width: 768px){
+  .footer-grid{ grid-template-columns: 1fr !important; gap:14px !important; }
+  .footer-grid>div{ margin:0 !important; }
+  .payments-row{ overflow-x:auto !important; flex-wrap:nowrap !important; }
+  .payments-row .pay-chip{ min-width:112px !important; height:32px !important; }
+  .payments-row .pay-chip img{ height:18px !important; }
+  .footer-grid a, .footer-grid p{ word-break: break-word; }
+}
+
+
+/* Keep arrows static globally */
+.tcar-btn{ transition: none !important; animation: none !important; }
+.tcar-btn:hover{ transform: translateY(-50%) !important; box-shadow:none !important; }
+
+
+/* === v49: Payments grid on tight screens (even spread) === */
+@media (max-width: 900px){
+  .payments-row{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+    gap: 10px 12px !important;
+    align-items: center !important;
+    justify-items: stretch !important;
+    overflow: visible !important; /* turn off horizontal scroll */
+  }
+  .payments-row .pay-chip{
+    width: auto !important;
+    min-width: 0 !important;
+    height: 34px !important;
+    border-radius: 17px !important;
+    padding: 4px 8px !important;
+  }
+  .payments-row .pay-chip .pay-frame.mini{
+    width: 100% !important;
+    height: 30px !important;
+    padding: 0 8px !important;
+  }
+  .payments-row .pay-chip img, .payments-row .pay-chip svg{
+    height: 18px !important;
+    width: auto !important;
+    max-width: 100% !important;
+  }
+}
+
+
+/* === v50: Mobile header compact + payments multi-column autofit === */
+
+/* 1) Compact mobile header like Apple/Stripe */
+@media (max-width: 768px){
+  nav{ position: sticky; top:0; z-index:100; height:56px; padding:6px 10px; background: rgba(10,18,28,.65); backdrop-filter: saturate(120%) blur(6px); border-bottom: 1px solid rgba(255,255,255,.06); }
+  nav .brand img{ height:28px; width:auto; }
+  nav .brand h1, nav .brand .wordmark { font-size: 18px; line-height:1; margin:0; }
+  .nav-toggle{ font-size:22px; padding:6px 10px; color:#eef5fb; }
+  /* dropdown */
+  .nav-links{ position:absolute; left:0; right:0; top:56px; display:none; flex-direction:column; background: rgba(10,18,28,.92); border-bottom: 1px solid rgba(255,255,255,.08); }
+  nav.open .nav-links{ display:flex; }
+  .nav-links a{ padding:12px 16px; border-top:1px solid rgba(255,255,255,.06); }
+}
+
+/* 2) Payments: auto-fit grid on tight screens; ensure earlier 100% widths can't win */
+@media (max-width: 900px){
+  .payments-row{
+    display: grid !important;
+    grid-auto-flow: row dense !important;
+    grid-template-columns: repeat(auto-fit, minmax(118px, 1fr)) !important;
+    gap: 10px 12px !important;
+    align-items: center !important;
+    justify-items: stretch !important;
+    overflow: visible !important;
+  }
+  .payments-row .pay-chip{
+    width: auto !important;
+    max-width: none !important;
+    min-width: 0 !important;
+    height: 34px !important;
+    border-radius: 17px !important;
+    padding: 4px 8px !important;
+    flex: 0 0 auto !important;
+  }
+  .payments-row .pay-chip .pay-frame.mini{ width: 100% !important; height: 30px !important; padding: 0 8px !important; }
+  .payments-row .pay-chip img, .payments-row .pay-chip svg{ height: 18px !important; width:auto !important; max-width:100% !important; }
+}
+
+/* 2b) Exact columns by breakpoint (inspired by Stripe's responsive tokens) */
+@media (max-width: 480px){
+  .payments-row{ grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (min-width: 481px) and (max-width: 900px){
+  .payments-row{ grid-template-columns: repeat(3, 1fr) !important; }
+}
+
+/* Keep email/phone from overflowing */
+@media (max-width: 768px){
+  .footer-grid a, .footer-grid p { word-wrap: break-word; overflow-wrap: anywhere; }
+}
+
+/* Ensure any legacy rule doesn't force single column */
+@media (max-width: 900px){
+  .payments-row{ flex-wrap: unset !important; }
+}
+
+
+/* === v51: Footer spacing, payments 3-col on small phones, and refined mobile header === */
+
+/* Footer text breathing room */
+@media (max-width: 1024px){
+  .footer-grid{ gap: 12px 20px !important; }
+  .footer-grid h4{ margin: 0 0 8px !important; }
+  .footer-grid p{ margin: 4px 0 !important; line-height: 1.45 !important; }
+}
+
+/* Payments grid: prefer 3 columns on small phones */
+@media (max-width: 540px){
+  .payments-row{
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 10px 10px !important;
+    overflow: visible !important;
+  }
+  .payments-row .pay-chip{
+    height: 30px !important;
+    border-radius: 15px !important;
+    padding: 3px 8px !important;
+  }
+  .payments-row .pay-chip .pay-frame.mini{ height: 26px !important; }
+  .payments-row .pay-chip img, .payments-row .pay-chip svg{ height: 16px !important; }
+}
+
+/* Refined mobile header (collapsible dropdown with animation) */
+@media (max-width: 768px){
+  nav{ height: 52px; padding: 6px 10px; background: rgba(10,18,28,.7); backdrop-filter: blur(6px); border-bottom:1px solid rgba(255,255,255,.06); display:flex; align-items:center; }
+  nav .brand img{ height: 26px; width:auto; }
+  nav .brand .wordmark, nav .brand h1{ font-size: 17px; line-height:1; margin:0; }
+  .nav-toggle{ margin-left:auto; background:transparent; border:0; font-size:22px; padding:6px 8px; color:#eaf2f7; }
+  .nav-links{ position:absolute; left:0; right:0; top:52px; margin:0; background: rgba(10,18,28,.96); border-bottom:1px solid rgba(255,255,255,.08); overflow:hidden; max-height:0; display:flex; flex-direction:column; transition:max-height .25s ease; }
+  nav.open .nav-links{ max-height: 280px; }
+  .nav-links a{ padding: 12px 16px; border-top:1px solid rgba(255,255,255,.06); }
+}
+
+/* Keep carousel arrows static */
+.tcar-btn{ transition: none !important; animation:none !important; }
+.tcar-btn:hover{ transform: translateY(-50%) !important; box-shadow:none !important; }
+
+
+/* === v52: Sleek mobile menu (glass, rounded, animated) === */
+@media (max-width: 768px){
+  /* Header bar */
+  nav{
+    position: sticky; top:0; z-index: 120;
+    height: 52px;
+    padding: 6px 10px;
+    background: linear-gradient(90deg, rgba(10,18,28,.78), rgba(10,18,28,.62));
+    backdrop-filter: saturate(120%) blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    display:flex; align-items:center; gap:10px;
+  }
+  nav .brand{ display:flex; align-items:center; gap:8px; }
+  nav .brand img{ height:26px; width:auto; }
+  nav .brand .wordmark, nav .brand h1{ font-size:17px; margin:0; line-height:1; color:#eaf2f7; letter-spacing:.2px; }
+  .nav-toggle{ margin-left:auto; background:transparent; border:0; font-size:22px; padding:6px 8px; color:#eef5fb; }
+  .nav-toggle:focus-visible{ outline:2px solid #1fb6ff; outline-offset:2px; border-radius:8px; }
+
+  /* Dropdown container */
+  .nav-links{
+    position: absolute; left:8px; right:8px; top:56px;
+    display:flex; flex-direction:column;
+    margin: 0;
+    background: rgba(12, 20, 28, .78);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    overflow:hidden;
+
+    /* animation states */
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-6px) scale(.98);
+    transition: max-height .28s ease, opacity .2s ease, transform .24s ease;
+  }
+  nav.open .nav-links{
+    max-height: 320px;
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Links */
+  .nav-links a{
+    display:block;
+    padding: 12px 16px;
+    color:#eaf2f7;
+    text-decoration:none;
+    font-weight:600;
+    letter-spacing:.2px;
+  }
+  .nav-links a + a{ border-top: 1px solid rgba(255,255,255,.06); }
+  .nav-links a:active, .nav-links a:hover{
+    background: rgba(255,255,255,.06);
+  }
+}
+
+
+/* === v53: Professional mobile menu for header.nav === */
+@media (max-width: 768px){
+  header.nav{
+    position: sticky; top:0; z-index:120;
+    height: 52px;
+    background: linear-gradient(90deg, rgba(10,18,28,.78), rgba(10,18,28,.62));
+    backdrop-filter: saturate(120%) blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  header.nav .nav-inner{ display:flex; align-items:center; gap:10px; }
+  header.nav .brand{ display:flex; align-items:center; gap:8px; }
+  header.nav .brand .brand-logo{ height:26px; width:auto; }
+  header.nav .brand span{ color:#eaf2f7; font-weight:800; letter-spacing:.2px; }
+
+  header.nav .nav-toggle{
+    margin-left:auto; background:transparent; border:0; font-size:22px;
+    padding:6px 8px; color:#eef5fb;
+  }
+  header.nav .nav-toggle:focus-visible{ outline:2px solid #1fb6ff; outline-offset:2px; border-radius:8px; }
+
+  header.nav .links{
+    position: absolute; left:8px; right:8px; top:56px;
+    margin:0; padding:0; list-style:none;
+    background: rgba(12,20,28,.78);
+    -webkit-backdrop-filter: blur(8px) saturate(120%);
+    backdrop-filter: blur(8px) saturate(120%);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    box-shadow: 0 18px 40px rgba(0,0,0,.35);
+    overflow:hidden;
+
+    max-height:0; opacity:0; transform: translateY(-6px) scale(.98);
+    transition: max-height .28s ease, opacity .2s ease, transform .24s ease;
+  }
+  header.nav.open .links{ max-height:300px; opacity:1; transform: translateY(0) scale(1); }
+
+  header.nav .links a{
+    display:block; padding:12px 16px; color:#eaf2f7; text-decoration:none; font-weight:600; letter-spacing:.2px;
+  }
+  header.nav .links a + a{ border-top: 1px solid rgba(255,255,255,.06); }
+  header.nav .links a:hover{ background: rgba(255,255,255,.06); }
+}
+
+
+/* === v54: Hide hamburger on desktop; keep classic inline nav on desktop === */
+
+/* Desktop defaults */
+@media (min-width: 769px){
+  header.nav .nav-toggle{ display: none !important; }
+  header.nav{ height: 64px; }
+  header.nav .nav-inner{ display:flex; align-items:center; justify-content:space-between; }
+  header.nav .links{
+    position: static !important;
+    display: flex !important;
+    gap: 22px;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  header.nav .links a{
+    padding: 0 !important;
+    border: 0 !important;
+    color: inherit;
+  }
+  header.nav.open .links{ /* ensure desktop isn't affected by mobile toggle */ 
+    max-height: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* Mobile keeps the collapsible behavior (rules already present under max-width:768px) */
+
+
+/* === v55: slight dim overlay on hero slides; keep caption & arrows above === */
+.tcar-slide::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: linear-gradient(180deg, rgba(0,0,0,.18) 0%, rgba(0,0,0,.38) 75%);
+  pointer-events:none;
+  display:block !important;
+}
+.tcar-caption{ z-index: 3 !important; }
+.tcar-btn{ z-index: 4 !important; }
+.tcar-dots{ z-index: 4 !important; }
+
+
+/* === v56: Desktop header restyle to match mobile glass look + logo offset === */
+@media (min-width: 769px){
+  /* Hide hamburger on desktop */
+  header.nav .nav-toggle{ display:none !important; }
+
+  /* Glassy top bar */
+  header.nav{
+    position: sticky; top:0; z-index:120;
+    height: 68px;
+    background: linear-gradient(180deg, rgba(8,12,16,.92), rgba(8,12,16,.84));
+    backdrop-filter: saturate(120%) blur(6px);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  header.nav .nav-inner{ display:flex; align-items:center; justify-content:space-between; gap:16px; }
+
+  /* Logo offset from extreme left */
+  header.nav .brand{ display:flex; align-items:center; gap:10px; margin-left: 16px; }
+  header.nav .brand .brand-logo{ height: 30px; width:auto; }
+
+  /* Links inside a rounded "pill bar" */
+  header.nav .links{
+    display:flex !important; gap:24px;
+    padding: 10px 14px;
+    background: rgba(255,255,255,.06);
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.22);
+    position: static !important;
+    max-height: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  header.nav .links a{
+    color:#eaf2f7; text-decoration:none; font-weight:700; letter-spacing:.2px;
+    padding: 6px 2px; border:0;
+  }
+  header.nav .links a:hover{ text-shadow: 0 0 1px rgba(255,255,255,.6); }
+}
+
+
+/* === v57: Desktop header gradient tuned for logo readability === */
+@media (min-width: 769px){
+  header.nav{
+    position: sticky; top:0; z-index:120;
+    height: 68px;
+    /* lighten the left side behind logo, then blend into the current dark glass */
+    background: linear-gradient(90deg,
+      rgba(32, 48, 62, 0.92) 0%,
+      rgba(20, 32, 42, 0.90) 28%,
+      rgba(8, 12, 16, 0.88) 64%,
+      rgba(8, 12, 16, 0.84) 100%
+    );
+  }
+  /* subtle extra lift just behind the brand area for contrast */
+  header.nav::before{
+    content:"";
+    position:absolute; left:0; top:0; bottom:0; width:220px;
+    background: linear-gradient(90deg, rgba(255,255,255,.08), rgba(255,255,255,0));
+    pointer-events:none;
+  }
+  /* tiny drop-shadow to help on any dark zone */
+  header.nav .brand .brand-logo{ filter: drop-shadow(0 0 1px rgba(0,0,0,.35)) drop-shadow(0 1px 2px rgba(0,0,0,.25)); }
+  /* logo offset remains */
+  header.nav .brand{ margin-left:16px; }
+}
+
+
+/* === v58: Bigger logo, brighter left glow, slight right-shift (tabulation) === */
+@media (min-width: 769px){
+  /* Increase logo size */
+  header.nav .brand .brand-logo{ height: 34px; width: auto; }
+
+  /* Shift the whole header content a bit to the right */
+  header.nav .nav-inner{ padding-left: 16px; }
+  header.nav .brand{ margin-left: 22px; } /* was 16px */
+
+  /* Make the left-side glow brighter and wider under the logo */
+  header.nav{
+    background: linear-gradient(90deg,
+      rgba(46, 68, 86, 0.96) 0%,
+      rgba(28, 44, 56, 0.94) 30%,
+      rgba(10, 16, 22, 0.90) 65%,
+      rgba(8, 12, 16, 0.86) 100%
+    );
+  }
+  header.nav::before{
+    content:"";
+    position:absolute; left:0; top:0; bottom:0; width:280px; /* wider than before */
+    background: linear-gradient(90deg, rgba(255,255,255,.12), rgba(255,255,255,0));
+    pointer-events:none;
+  }
+}
+
+
+/* === v59: Shift header left, 20% bigger logo, tighter menu spacing (desktop) === */
+@media (min-width: 769px){
+  /* 20% bigger than 34px -> ~41px */
+  header.nav .brand .brand-logo{ height: 41px; width:auto; }
+
+  /* Nudge content closer to left edge (but not flush) */
+  header.nav .nav-inner{ padding-left: 8px; }
+  header.nav .brand{ margin-left: 8px; }
+
+  /* Tighter menu grouping */
+  header.nav .links{
+    gap: 16px;                 /* was 24px */
+    padding: 8px 12px;         /* was 10px 14px */
+  }
+  header.nav .links a{
+    padding: 6px 0;            /* less internal spacing */
+    letter-spacing: .15px;     /* slightly tighter tracking */
+  }
+}
+
+
+/* === v60: Header tighter group, add left margin (more centered), Footer uses header colors === */
+@media (min-width: 769px){
+  /* Add breathing room from the very left, keep group compact */
+  header.nav .nav-inner{ padding-left: 40px; padding-right: 40px; }
+  header.nav .brand{ margin-left: 0; }
+  /* Tighter menu grouping */
+  header.nav .links{ gap: 12px; padding: 6px 10px; }
+  header.nav .links a{ padding: 4px 0; letter-spacing: .1px; }
+}
+
+/* Footer gradient to match header (light blue -> dark blue), remove any light backgrounds */
+.site-footer{
+  background: linear-gradient(90deg,
+    rgba(46, 68, 86, 0.96) 0%,
+    rgba(28, 44, 56, 0.94) 30%,
+    rgba(10, 16, 22, 0.90) 65%,
+    rgba(8, 12, 16, 0.86) 100%
+  ) !important;
+  border-top: 1px solid rgba(255,255,255,.06);
+}
+.footer-grid, .footer-grid > div{
+  background: transparent !important;
+}
+/* Keep payment chips white for contrast; text remains readable */
+.payments-row .pay-chip,
+.payments-row .pay-chip .pay-frame.mini{
+  background: #fff !important;
+  border: 1px solid rgba(0,0,0,.12) !important;
+}
+
+
+/* === v61: Footer layout — brand+payments left, Fish Tanks centered, Contact right === */
+.footer-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr 1fr;
+  grid-template-areas:
+    "brand tanks contact"
+    "payments tanks contact";
+  column-gap: 36px;
+  row-gap: 10px;
+  align-items:start;
+}
+.footer-brand{ grid-area: brand; }
+.footer-tanks{ grid-area: tanks; }
+.footer-contact{ grid-area: contact; }
+.payments-wrap{ grid-area: payments; }
+
+/* Keep payments as one row on desktop */
+@media (min-width: 900px){
+  .payments-row{
+    display:flex !important; flex-wrap:nowrap !important; gap:14px !important; align-items:center !important;
+  }
+}
+
+/* Mobile/tablet: stack gracefully */
+@media (max-width: 900px){
+  .footer-grid{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "brand"
+      "payments"
+      "tanks"
+      "contact";
+    row-gap: 14px;
+  }
+}
+
+
+/* Header group shifted ~20% right on large screens */
+@media (min-width: 1024px){
+  header.nav .nav-inner{ padding-left: clamp(40px, 20vw, 260px); padding-right: 40px; }
+}
+
+
+/* === v62: Desktop header shift exactly 200px === */
+@media (min-width: 1024px){
+  header.nav .nav-inner{ padding-left: 200px !important; }
 }
