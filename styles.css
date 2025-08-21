@@ -1766,3 +1766,78 @@ a:focus-visible, button:focus-visible, .cta:focus-visible, .tcar-btn:focus-visib
     filter: drop-shadow(0 0 1px rgba(0,0,0,.25)) drop-shadow(0 1px 2px rgba(0,0,0,.2));
   }
 }
+
+
+/* === v82: FINAL — header palettes locked (desktop vs mobile) + mobile CTA centering === */
+
+/* MOBILE header = match footer palette */
+@media (max-width: 768px){
+  header.nav{
+    background: linear-gradient(90deg,
+      rgba(46, 68, 86, 0.96) 0%,
+      rgba(28, 44, 56, 0.94) 30%,
+      rgba(10, 16, 22, 0.90) 65%,
+      rgba(8, 12, 16, 0.86) 100%
+    ) !important;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    box-shadow: 0 1px 0 rgba(255,255,255,.03), 0 6px 16px rgba(0,0,0,.18);
+  }
+  header.nav::before{ display:none !important; }
+
+  /* Keep brand & hamburger readable on the darker sweep */
+  header.nav a, header.nav .brand, header.nav .brand *{ color:#e9f3fb !important; }
+  .menu-toggle, .nav-toggle, .menu-btn, .hamburger{ color:#e9f3fb !important; }
+  .hamburger span, .hamburger::before, .hamburger::after{ background:#e9f3fb !important; }
+  .menu-toggle svg, .nav-toggle svg{ fill:#e9f3fb !important; stroke:#e9f3fb !important; }
+
+  /* MOBILE hero CTA labels perfectly centered (kept from v81) */
+  .tcar .tcar-caption .cta-row,
+  .m-caption .cta-row{
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    gap:8px !important;
+  }
+  .tcar .tcar-caption .cta,
+  .tcar .tcar-caption .btn,
+  .tcar .tcar-caption .cta-primary,
+  .tcar .tcar-caption .cta-secondary,
+  .m-caption .cta,
+  .m-caption .btn,
+  .m-caption .cta-primary,
+  .m-caption .cta-secondary{
+    display:inline-flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    height:42px !important;
+    padding:0 16px !important;
+    line-height:1 !important;
+    vertical-align:middle !important;
+    white-space:nowrap !important;
+    transform:none !important;
+  }
+  .tcar .tcar-caption .cta > *, .m-caption .cta > *{
+    display:inline-block !important;
+    margin:0 !important;
+    padding:0 !important;
+    line-height:1 !important;
+    vertical-align:middle !important;
+    transform:none !important;
+  }
+}
+
+/* DESKTOP header = your light-left → deep blue sweep */
+@media (min-width: 769px){
+  header.nav{
+    background: linear-gradient(90deg,
+      rgba(255,255,255,0.90) 0%,
+      rgba(245,250,255,0.82) 5%,
+      rgba(122, 172, 196, 0.36) 12%,
+      rgba(46, 68, 86, 0.94) 26%,
+      rgba(20, 32, 42, 0.92) 58%,
+      rgba(8, 12, 16, 0.86) 100%
+    ) !important;
+    border-bottom: 1px solid rgba(255,255,255,.06);
+  }
+  header.nav::before{ display:none !important; }
+}
