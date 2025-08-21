@@ -1724,3 +1724,45 @@ a:focus-visible, button:focus-visible, .cta:focus-visible, .tcar-btn:focus-visib
 @media (min-width: 1024px){
   header.nav .nav-inner{ padding-left: 200px !important; }
 }
+
+
+/* === v63: Header starts with lighter blue on the left (not white) === */
+@media (min-width: 1024px){
+  /* Blue‑tinted light start → blends to dark */
+  header.nav{
+    background: linear-gradient(90deg,
+      rgba(88, 160, 190, 0.35) 0%,     /* light blue (no white) */
+      rgba(46, 68, 86, 0.94) 22%,
+      rgba(20, 32, 42, 0.92) 55%,
+      rgba(8, 12, 16, 0.86) 100%
+    ) !important;
+  }
+  /* Gentle blue glow behind the logo area for readability */
+  header.nav::before{
+    content:"";
+    position:absolute; left:0; top:0; bottom:0; width:300px;
+    background: linear-gradient(90deg, rgba(70, 180, 210, .18), rgba(70, 180, 210, 0));
+    pointer-events:none;
+  }
+}
+
+
+/* === v64: Header starts from white and blends to dark blue for maximum logo contrast === */
+@media (min-width: 1024px){
+  header.nav{
+    background: linear-gradient(90deg,
+      rgba(255,255,255,0.88) 0%,        /* bright start so the logo reads clearly */
+      rgba(245,250,255,0.80) 6%,
+      rgba(120,170,195,0.38) 12%,
+      rgba(46,68,86,0.94) 28%,
+      rgba(20,32,42,0.92) 58%,
+      rgba(8,12,16,0.86) 100%
+    ) !important;
+  }
+  /* Remove the older left glow plate so we don't double-brighten */
+  header.nav::before{ display: none !important; }
+  /* Keep a tiny logo drop shadow for any mid tones */
+  header.nav .brand .brand-logo{
+    filter: drop-shadow(0 0 1px rgba(0,0,0,.25)) drop-shadow(0 1px 2px rgba(0,0,0,.2));
+  }
+}
